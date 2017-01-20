@@ -4,4 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Wave/Scenes/Main.unity
+  - enabled: 1
+    path: Assets/Wave/Scenes/Start.unity
+  - enabled: 1
+    path: Assets/Wave/Scenes/Game.unity
+  - enabled: 1
+    path: Assets/Wave/Scenes/Char_Generator.unity
