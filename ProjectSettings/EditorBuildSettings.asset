@@ -13,3 +13,7 @@ EditorBuildSettings:
     path: Assets/Wave/Scenes/Game.unity
   - enabled: 1
     path: Assets/Wave/Scenes/Char_Generator.unity
+  - enabled: 1
+    path: Assets/Wave/Scenes/End.unity
+  - enabled: 1
+    path: Assets/Wave/Scenes/Credits.unity
