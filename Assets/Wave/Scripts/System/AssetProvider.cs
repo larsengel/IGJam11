@@ -22,15 +22,12 @@ public class AssetProvider : MonoBehaviour
         var scene = SceneManager.GetSceneByName (assetId);
 
         if (scene.IsValid ()) {
-            // find the first object which is not of type "SceneContext" and register that
+            
             // enforces the game convention to have a GO under a SceneContext with the same name as the scene
 
             var sceneObjects = scene.GetRootGameObjects ();
-            if (sceneObjects [0].name != "SceneContext") {
-                throw new Exception ("AssetProvider: Please have a 'SceneContext' as a scene root: " + assetId + " / " + sceneObjects [0].name);
-            }
-
-            var rootObject = sceneObjects [0].transform.GetChild (0).gameObject;
+        
+            var rootObject = sceneObjects [0];
             if (rootObject.name != assetId) {
                 throw new Exception ("AssetProvider: Please name your scene rootObject and scene file the same: " + assetId);
             }
