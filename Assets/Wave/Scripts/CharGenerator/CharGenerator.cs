@@ -10,31 +10,26 @@ public class CharGenerator : MonoBehaviour
     public Sprite[] Noses;
     public Sprite[] Mouths;
     public Sprite[] Hairs;
-    public Sprite[] Heads;
 
     void Start()
     {
-        
-
-        Random rnd = new Random();
-        for (int i = 0; i < People; i++)
-        {
-            createCharacter(rnd);
-        }
+        createFace();
     }
 
-    void createCharacter(Random rnd)
+    void createFace()
     {
-        // Decide Gender
-        var gender = rnd.Next(1, 3);
+        Random rnd = new Random();
 
-        if (gender == 1)
-        {
-            Debug.Log("male");
-        }
-        else
-        {
-            Debug.Log("female");
-        }
+        var nose = Noses[rnd.Next(0, Noses.Length)];
+        var eyes = Eyes[rnd.Next(0, Eyes.Length)];
+        var mouth = Mouths[rnd.Next(0, Mouths.Length)];
+        var hair = Hairs[rnd.Next(0, Hairs.Length)];
+
+
+        transform.Find("Eyes").GetComponent<SpriteRenderer>().sprite = eyes;
+        transform.Find("Nose").GetComponent<SpriteRenderer>().sprite = nose;
+        transform.Find("Mouth").GetComponent<SpriteRenderer>().sprite = mouth;
+        transform.Find("Hair").GetComponent<SpriteRenderer>().sprite = hair;
+
     }
 }
