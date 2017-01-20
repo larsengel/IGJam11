@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4535005430236012}
   - component: {fileID: 212786711086852198}
   m_Layer: 0
-  m_Name: B_haare
+  m_Name: haare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4401360340776778}
   - component: {fileID: 212182838454355902}
   m_Layer: 0
-  m_Name: B_kinn
+  m_Name: kinn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4290424897361292}
   m_Layer: 0
-  m_Name: bone_002
+  m_Name: bone_hand_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 4602030102099072}
   - component: {fileID: 212007634949591688}
   m_Layer: 0
-  m_Name: B_nase
+  m_Name: nase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4459567309099760}
   m_Layer: 0
-  m_Name: bone_006
+  m_Name: bone_hand_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -193,7 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4994669160936426}
   m_Layer: 0
-  m_Name: bone_001
+  m_Name: bone_arm_middle_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4942194961074892}
   m_Layer: 0
-  m_Name: bone_003
+  m_Name: neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,7 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4567888382517378}
   m_Layer: 0
-  m_Name: bone_004
+  m_Name: bone_arm_bottom_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 4028167810499992}
   - component: {fileID: 212887976121362712}
   m_Layer: 0
-  m_Name: B_augen
+  m_Name: augen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4662575798234124}
   m_Layer: 0
-  m_Name: bone_005
+  m_Name: bone_arm_middle_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -335,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4997885890421886}
   m_Layer: 0
-  m_Name: bone_000
+  m_Name: bone_arm_bottom_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,7 +419,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719517899885666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.5, y: -1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4997885890421886}
