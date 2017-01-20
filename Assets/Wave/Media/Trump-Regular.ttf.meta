@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2bb84bd7a89de4d84a1dd41468b6dbbe
+timeCreated: 1484946266
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Trump
+  fontNames:
+  - Trump
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,18 +21,22 @@ public class AssetProvider : MonoBehaviour
         yield return SceneManager.LoadSceneAsync (assetId, LoadSceneMode.Additive); 
         var scene = SceneManager.GetSceneByName (assetId);
 
+        // TODO check if isLoaded is really false for scenes we have had already loaded
         if (scene.IsValid ()) {
-            
+
             // enforces the game convention to have a GO under a SceneContext with the same name as the scene
 
-            var sceneObjects = scene.GetRootGameObjects ();
-        
-            var rootObject = sceneObjects [0];
-            if (rootObject.name != assetId) {
-                throw new Exception ("AssetProvider: Please name your scene rootObject and scene file the same: " + assetId);
+            if (scene.isLoaded) {
+                var sceneObjects = scene.GetRootGameObjects ();
+
+                var rootObject = sceneObjects [0];
+                if (rootObject.name != assetId) {
+                    throw new Exception ("AssetProvider: Please name your scene rootObject and scene file the same: " + assetId);
+                }
+
+                RegisterAsset (rootObject);
             }
 
-            RegisterAsset (rootObject);
         }
     }
 
@@ -56,6 +60,7 @@ public class AssetProvider : MonoBehaviour
         // we need to wait one frame since it could be that this unload was triggered 
         // by an physic event - and there is a bug in Unity that makes unity hang then 
         yield return new WaitForEndOfFrame (); 
+       
         if (RegisteredAssets.ContainsKey (id)) {
             foreach (GameObject asset in this.RegisteredAssets[id]) {
                 SceneManager.UnloadSceneAsync (asset.name); 
