@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26ec3417-0c0f-45bb-9708-08bcb5d10247" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.IGJam11/.idea/contentModel.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.IGJam11/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.IGJam11/.idea/vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.IGJam11/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.idea.IGJam11/riderModule.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,12 +96,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484947653274</updated>
-      <workItem from="1484947657693" duration="51000" />
+      <workItem from="1484947657693" duration="84000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove intellij stuff from git">
+      <created>1484947728650</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1484947728650</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51000" />
+    <option name="totallyTimeSpent" value="84000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -146,6 +149,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove intellij stuff from git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove intellij stuff from git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
