@@ -9,7 +9,8 @@ namespace Wave
     {
         START = 1,
         GAME,
-        END
+        END,
+        CREDITS
     }
 
     public class GameState
@@ -37,17 +38,21 @@ namespace Wave
        
         Dictionary<GameStates, GameState> states = new Dictionary<GameStates, GameState> ();
 
+        // append the list of scenes you want to add to a gamestate at the end of this list
+        // and add the scenes to the build_settings
         List<string> start_assets = new List<string> () { "Start" };
-       
         List<string> game_assets = new List<string> () { "Game" };
+        List<string> end_assets = new List<string> () { "End" };
+        List<string> credits_assets = new List<string> () { "Credits" };
 
         void Awake ()
         {
             AssetProvider = GetComponent<AssetProvider> ();
 
-
             states.Add (GameStates.START, new GameState (GameStates.START, "Start", start_assets));
             states.Add (GameStates.GAME, new GameState (GameStates.GAME, "Game", game_assets));
+            states.Add (GameStates.END, new GameState (GameStates.END, "End", end_assets));
+            states.Add (GameStates.CREDITS, new GameState (GameStates.CREDITS, "Credits", credits_assets));
 
             SwitchState (GameStates.START);
         }
@@ -72,15 +77,17 @@ namespace Wave
      
         }
 
-
-        void Update ()
+        public void StartGame ()
         {
-            if (Input.GetKey (KeyCode.P)) {
-                if (current_state.Id == GameStates.START) {
-                    SwitchState (GameStates.GAME);    
-                }
-            }
+            SwitchState (GameStates.GAME);    
         }
+
+        public void ShowCredits ()
+        {
+            SwitchState (GameStates.CREDITS);    
+        }
+
+
     }
 
 }
