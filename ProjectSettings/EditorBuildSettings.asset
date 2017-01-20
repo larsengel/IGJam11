@@ -10,10 +10,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Wave/Scenes/Start.unity
   - enabled: 1
-    path: Assets/Wave/Scenes/Game.unity
-  - enabled: 1
     path: Assets/Wave/Scenes/Char_Generator.unity
   - enabled: 1
     path: Assets/Wave/Scenes/End.unity
   - enabled: 1
     path: Assets/Wave/Scenes/Credits.unity
+  - enabled: 1
+    path: Assets/Wave/Scenes/InGameUI.unity
+  - enabled: 1
+    path: Assets/Wave/Scenes/Level/Level1.unity
+  - enabled: 1
+    path: Assets/Wave/Scenes/Level/Level2.unity
