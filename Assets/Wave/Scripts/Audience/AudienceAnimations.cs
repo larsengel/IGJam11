@@ -26,6 +26,5 @@ public class AudienceAnimations : MonoBehaviour
 	            animator.SetTrigger("wave_right");
 	            break;
 	    }
-	    state = 0;
 	}
 }
