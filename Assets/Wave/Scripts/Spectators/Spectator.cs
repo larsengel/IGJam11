@@ -33,10 +33,15 @@
                 if (value)
                 {
                     this.BecameUpset.Invoke();
+                    transform.Find("audience").GetComponent<Animator>().SetTrigger("idle");
                 }
                 else
                 {
                     this.BecameHappy.Invoke();
+                    var rnd = Random.Range(1, 3);
+                    var wave = rnd == 1 ? "wave_left" : "wave_right";
+
+                    transform.Find("audience").GetComponent<Animator>().SetTrigger(wave);
                 }
             }
         }
