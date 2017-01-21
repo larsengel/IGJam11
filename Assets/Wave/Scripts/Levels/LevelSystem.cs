@@ -38,7 +38,8 @@
             {
                 newLevel = this.CurrentConfiguration.NextLevelId;
             }
-            this.main.SwitchState(newLevel);
+
+            this.main.SwitchState(newLevel != GameStates.NONE ? newLevel : GameStates.GAME_FINISHED);
         }
 
         protected virtual void OnLevelStarted()
