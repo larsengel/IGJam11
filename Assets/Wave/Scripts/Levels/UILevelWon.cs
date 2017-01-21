@@ -20,7 +20,7 @@ namespace Wave.Levels
             {
                 scoreText.text = string.Format("Score: {0} %", Mathf.RoundToInt(statsSystem.AvaragePoints * 100));
             }
-            //newspapers[Random.Range(0, newspapers.Count)].Init(true);
+            newspapers[Random.Range(0, newspapers.Count)].Init(true);
         }
 
         public void GoToNextLevel()
