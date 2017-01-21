@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Configuration:
-    ShowSignFactor: 0.3
+    ShowSignFactor: 0.4
     AudienceConfiguration: {fileID: 568527498}
     Duration: 60
     LevelId: 6

@@ -358,13 +358,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Audience: {fileID: 568527497}
-  CurrentLevelBehaviour: {fileID: 608926807}
   NoOfRows: 3
   PeoplePerRow: 5
   CharacterWidth: 10
   CharacterHeight: 8
   SecondRowSpacing: 2
-  EmptySeatsFactor: 0.728
   MinimumScale: 0.8
   MaximumScale: 1.2
   MaxDepthScale: 0.5
@@ -417,7 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Configuration:
-    AllowSpectatorSigns: 1
+    ShowSignFactor: 0.05
     AudienceConfiguration: {fileID: 568527498}
     Duration: 45
     LevelId: 3
