@@ -134,7 +134,7 @@ MonoBehaviour:
   AudiencePrefab: {fileID: 1680480023894746, guid: 96e35c818b66b9a4ebcb4046e661f06a,
     type: 2}
   Audience: {fileID: 568527497}
-  NoOfRows: 2
+  NoOfRows: 3
   PeoplePerRow: 5
   CharacterWidth: 10
   CharacterHeight: 8
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 608926808}
   - component: {fileID: 608926809}
   m_Layer: 0
-  m_Name: Level1
+  m_Name: Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,11 +189,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Configuration:
     Duration: 45
-    LevelId: 2
+    LevelId: 4
     MaxLittleWaveDuration: 10
-    UpsetSpectatorsInterval: 3
+    UpsetSpectatorsInterval: 2
     PersuadeDuration: 0.5
-    NextLevelId: 3
+    NextLevelId: 5
     WaveThreshold: 0.25
 --- !u!82 &608926808
 AudioSource:
