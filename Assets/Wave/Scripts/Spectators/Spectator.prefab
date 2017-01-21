@@ -1585,6 +1585,7 @@ MonoBehaviour:
     Root: {fileID: 224649230166288640}
     TextTransform: {fileID: 224067531870388552}
     SchieldAni: {fileID: 4726176506409856}
+  Spectator: {fileID: 114040314980610966}
 --- !u!114 &114038107333105266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1607,7 +1608,6 @@ MonoBehaviour:
   - Trumpence
   - You are gr8!
   - Grab her!
-  Spectator: {fileID: 114040314980610966}
 --- !u!114 &114040314980610966
 MonoBehaviour:
   m_ObjectHideFlags: 1
