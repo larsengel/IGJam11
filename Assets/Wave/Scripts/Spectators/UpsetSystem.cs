@@ -22,7 +22,7 @@
             }
 
             // Choose not upset spectator.
-            var happySpectators = this.SpectatorSystem.Spectators.FindAll(spectator => !spectator.IsUpset).ToList();
+            var happySpectators = this.SpectatorSystem.Spectators.FindAll(spectator => !spectator.IsUpset && !spectator.IsPursuading).ToList();
             if (happySpectators.Count == 0)
             {
                 return;
