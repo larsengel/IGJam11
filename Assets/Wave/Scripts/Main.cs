@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Wave
 {
+    using UnityEngine.SceneManagement;
 
     public enum GameStates
     {
@@ -57,7 +58,10 @@ namespace Wave
             states.Add (GameStates.END, new GameState (GameStates.END, "End", end_assets));
             states.Add (GameStates.CREDITS, new GameState (GameStates.CREDITS, "Credits", credits_assets));
 
-            SwitchState (GameStates.START);
+            if (SceneManager.sceneCount <= 1)
+            {
+                SwitchState(GameStates.START);
+            }
         }
 
         /**
