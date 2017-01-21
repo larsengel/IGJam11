@@ -10,7 +10,7 @@ public class Sign : MonoBehaviour {
 
 
     void Update () {
-        var rotation = Quaternion.LookRotation(new Vector3(0,0,-245.348f));
+        var rotation = Quaternion.Euler(new Vector3(0,0,-0f));
         transform.rotation = rotation;
     }
 }

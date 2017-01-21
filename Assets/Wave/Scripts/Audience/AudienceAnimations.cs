@@ -35,10 +35,13 @@ public class AudienceAnimations : MonoBehaviour
             animator.SetTrigger("wave_left");
             var enabled = Random.Range(1, 3) == 1;
             Search(transform, "schild_left").GetComponent<SpriteRenderer>().enabled = enabled;
+            Search(transform, "text_left").GetComponent<MeshRenderer>().enabled = enabled;
         } else if (direction == "right")
         {
             var enabled = Random.Range(1, 3) == 1;
             Search(transform, "schild_right").GetComponent<SpriteRenderer>().enabled = enabled;
+            Search(transform, "text_right").GetComponent<MeshRenderer>().enabled = enabled;
+
             animator.SetTrigger("wave_right");
         }
     }
