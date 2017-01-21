@@ -135,8 +135,8 @@ MonoBehaviour:
     type: 2}
   Audience: {fileID: 568527497}
   NoOfRows: 7
-  PeoplePerRow: 8
-  CharacterWidth: 6.91
+  PeoplePerRow: 7
+  CharacterWidth: 5
   CharacterHeight: 4
   SecondRowSpacing: 2
   EmptySeatsFactor: 0.728
