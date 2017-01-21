@@ -33,12 +33,12 @@ public class AudienceAnimations : MonoBehaviour
         if (direction == "left")
         {
             animator.SetTrigger("wave_left");
-            var enabled = Random.Range(1, 3) == 1;
+            var enabled = Random.Range(1, 10) <=3 ;
             Search(transform, "schild_left").GetComponent<SpriteRenderer>().enabled = enabled;
             Search(transform, "text_left").GetComponent<MeshRenderer>().enabled = enabled;
         } else if (direction == "right")
         {
-            var enabled = Random.Range(1, 3) == 1;
+            var enabled = Random.Range(1, 10) <=3 ;
             Search(transform, "schild_right").GetComponent<SpriteRenderer>().enabled = enabled;
             Search(transform, "text_right").GetComponent<MeshRenderer>().enabled = enabled;
 
