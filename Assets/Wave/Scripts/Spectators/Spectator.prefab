@@ -1587,7 +1587,7 @@ MonoBehaviour:
     Root: {fileID: 224274435160709692}
     TextTransform: {fileID: 224185644105396146}
     SchieldAni: {fileID: 4690374890352460}
-  Spectator: {fileID: 0}
+  Spectator: {fileID: 114040314980610966}
 --- !u!114 &114040314980610966
 MonoBehaviour:
   m_ObjectHideFlags: 1

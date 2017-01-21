@@ -200,13 +200,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Audience: {fileID: 568527497}
-  CurrentLevelBehaviour: {fileID: 608926807}
   NoOfRows: 2
   PeoplePerRow: 5
   CharacterWidth: 10
   CharacterHeight: 8
   SecondRowSpacing: 2
-  EmptySeatsFactor: 0.728
   MinimumScale: 0.8
   MaximumScale: 1.2
   MaxDepthScale: 0.5
@@ -565,6 +563,59 @@ Transform:
   m_PrefabParentObject: {fileID: 4206556539455470, guid: e41b75cb1b7972f4ea9bf321b220c074,
     type: 2}
   m_PrefabInternal: {fileID: 1502849075}
+--- !u!1001 &1890234042
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4505107426209662, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505107426209662, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505107426209662, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505107426209662, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505107426209662, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505107426209662, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505107426209662, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505107426209662, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024832831559504, guid: 96e35c818b66b9a4ebcb4046e661f06a,
+        type: 2}
+      propertyPath: Spectator
+      value: 
+      objectReference: {fileID: 1890234043}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 96e35c818b66b9a4ebcb4046e661f06a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1890234043 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114040314980610966, guid: 96e35c818b66b9a4ebcb4046e661f06a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1890234042}
+  m_Script: {fileID: 11500000, guid: 21535ff1fe74dd04da4a4377cb8c197d, type: 3}
 --- !u!1 &1981002113
 GameObject:
   m_ObjectHideFlags: 0
