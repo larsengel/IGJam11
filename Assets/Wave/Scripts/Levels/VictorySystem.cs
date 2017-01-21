@@ -6,8 +6,6 @@
 
     public class VictorySystem : MonoBehaviour
     {
-        public GameStates GameFinishedState = GameStates.GAME_FINISHED;
-
         public LevelSystem LevelSystem;
 
         public GameStates LevelWonState = GameStates.LEVEL_WON;

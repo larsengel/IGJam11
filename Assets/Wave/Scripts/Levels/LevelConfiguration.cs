@@ -22,6 +22,12 @@
         public float MaxLittleWaveDuration = 3.0f;
 
         /// <summary>
+        ///   Id of the next level to start after this one was won.
+        /// </summary>
+        [Tooltip("Id of the next level to start after this one was won")]
+        public GameStates NextLevelId;
+
+        /// <summary>
         ///   Threshold for waving ratio.
         /// </summary>
         [Tooltip("Threshold for waving ratio")]

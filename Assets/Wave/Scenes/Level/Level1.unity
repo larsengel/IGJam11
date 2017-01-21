@@ -188,4 +188,5 @@ MonoBehaviour:
   Configuration:
     Duration: 2
     MaxLittleWaveDuration: 3
+    NextLevelId: 3
     WaveThreshold: 0.25

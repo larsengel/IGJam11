@@ -8,6 +8,8 @@ namespace Wave
 
     public enum GameStates
     {
+        NONE,
+
         START = 1,
         LEVEL1,
         LEVEL2,
