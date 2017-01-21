@@ -5,60 +5,60 @@ using UnityEngine;
 public class Particler : MonoBehaviour
 {
 
-    public GameObject HappyParticlePrefab;
-    public GameObject UpsetParticlePrefab;
-    public GameObject HappyHaloPrefab;
+	public GameObject HappyParticlePrefab;
+	public GameObject UpsetParticlePrefab;
+	public GameObject HappyHaloPrefab;
 
-    public AudioClip PowerUpSound;
-    public AudioClip HappySound;
+	public AudioClip PowerUpSound;
+	public AudioClip HappySound;
 
-    public float Duration { get; set; }
+	public float Duration { get; set; }
 
-    public HappyHalo HappyHalo;
+	public HappyHalo HappyHalo;
 
-    public HappyHalo CreateHalo ()
-    {
-        if (HappyHalo != null) {
-            return HappyHalo;
-        }
+	public HappyHalo CreateHalo ()
+	{
+		if (HappyHalo != null) {
+			return HappyHalo;
+		}
 
-        HappyHalo = Instantiate (HappyHaloPrefab, Vector3.zero, Quaternion.identity, transform).GetComponent<HappyHalo> ();
-        HappyHalo.transform.localPosition = Vector3.zero;
-        HappyHalo.SpeedFactor = Duration;
+		HappyHalo = Instantiate (HappyHaloPrefab, Vector3.zero, Quaternion.identity, transform).GetComponent<HappyHalo> ();
+		HappyHalo.transform.localPosition = Vector3.zero;
+		HappyHalo.SpeedFactor = Duration;
 
-        var AudioSource = GetComponent<AudioSource> ();
-        AudioSource.clip = PowerUpSound;
-        AudioSource.Play ();
+		var AudioSource = GetComponent<AudioSource> ();
+		AudioSource.clip = PowerUpSound;
+		AudioSource.Play ();
 
-        return HappyHalo;
-    }
+		return HappyHalo;
+	}
 
-    public void DestroyHalo ()
-    {
-        if (!HappyHalo == null) {
-            Destroy (HappyHalo.gameObject);    
-            HappyHalo = null;
-        }
+	public void DestroyHalo ()
+	{
+		if (HappyHalo != null) {
+			Destroy (HappyHalo.gameObject);    
+			HappyHalo = null;
+		}
 
-        var AudioSource = GetComponent<AudioSource> ();
-        AudioSource.Stop ();
-    }
+		var AudioSource = GetComponent<AudioSource> ();
+		AudioSource.Stop ();
+	}
 
-    public void ShowHappy ()
-    {
-        var pos = transform.position;
-        var particle = Instantiate (HappyParticlePrefab, pos, Quaternion.identity);
-        Destroy (particle, 2.0f);
+	public void ShowHappy ()
+	{
+		var pos = transform.position;
+		var particle = Instantiate (HappyParticlePrefab, pos, Quaternion.identity);
+		Destroy (particle, 2.0f);
 
-        var AudioSource = GetComponent<AudioSource> ();
-        AudioSource.clip = HappySound;
-        AudioSource.Play ();
-    }
+		var AudioSource = GetComponent<AudioSource> ();
+		AudioSource.clip = HappySound;
+		AudioSource.Play ();
+	}
 
-    public void ShowUpset ()
-    {
-        var pos = transform.position;
-        var particle = Instantiate (UpsetParticlePrefab, pos, Quaternion.identity);
-        Destroy (particle, 2.0f);
-    }
+	public void ShowUpset ()
+	{
+		var pos = transform.position;
+		var particle = Instantiate (UpsetParticlePrefab, pos, Quaternion.identity);
+		Destroy (particle, 2.0f);
+	}
 }
