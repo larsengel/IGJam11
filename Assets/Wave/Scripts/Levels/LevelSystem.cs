@@ -7,17 +7,39 @@
 
     public class LevelSystem : MonoBehaviour
     {
-        private LevelBehaviour currentLevel;
+        private LevelConfiguration currentConfiguration;
+
+        private Main main;
 
         public LevelConfiguration CurrentConfiguration
         {
             get
             {
-                return this.currentLevel != null ? this.currentLevel.Configuration : null;
+                return this.currentConfiguration;
+            }
+            private set
+            {
+                if (value == this.currentConfiguration)
+                {
+                    return;
+                }
+                this.currentConfiguration = value;
+
+                this.OnLevelStarted();
             }
         }
 
         public event Action LevelStarted;
+
+        public void StartNextLevel()
+        {
+            var newLevel = GameStates.LEVEL1;
+            if (this.CurrentConfiguration != null)
+            {
+                newLevel = this.CurrentConfiguration.NextLevelId;
+            }
+            this.main.SwitchState(newLevel);
+        }
 
         protected virtual void OnLevelStarted()
         {
@@ -35,18 +57,18 @@
 
         private void OnEnable()
         {
-            this.currentLevel = FindObjectOfType<LevelBehaviour>();
+            var currentLevel = FindObjectOfType<LevelBehaviour>();
+            this.CurrentConfiguration = currentLevel != null ? currentLevel.Configuration : null;
             SceneManager.sceneLoaded += this.OnSceneLoaded;
+
+            this.main = FindObjectOfType<Main>();
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
         {
             var newLevel = FindObjectOfType<LevelBehaviour>();
-            if (newLevel != this.currentLevel)
-            {
-                this.currentLevel = newLevel;
-                this.OnLevelStarted();
-            }
+            var newLevelConfiguration = newLevel != null ? newLevel.Configuration : null;
+            this.CurrentConfiguration = newLevelConfiguration;
         }
     }
 }
