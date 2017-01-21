@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 608926808}
   - component: {fileID: 608926809}
   m_Layer: 0
-  m_Name: Level2
+  m_Name: Level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,11 +189,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Configuration:
     Duration: 45
-    LevelId: 3
+    LevelId: 4
     MaxLittleWaveDuration: 10
-    UpsetSpectatorsInterval: 3
+    UpsetSpectatorsInterval: 2
     PersuadeDuration: 0.5
-    NextLevelId: 4
+    NextLevelId: 5
     WaveThreshold: 0.25
 --- !u!82 &608926808
 AudioSource:
