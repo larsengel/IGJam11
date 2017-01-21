@@ -27,6 +27,10 @@ public class LevelAudioLooper : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        if (Loop == null) {
+            return;
+        }
+
         if (!AudioSource.isPlaying) {
             AudioSource.clip = Loop;
             AudioSource.Play ();

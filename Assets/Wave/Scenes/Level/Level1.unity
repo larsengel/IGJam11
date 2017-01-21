@@ -134,8 +134,8 @@ MonoBehaviour:
   AudiencePrefab: {fileID: 1680480023894746, guid: 96e35c818b66b9a4ebcb4046e661f06a,
     type: 2}
   Audience: {fileID: 568527497}
-  NoOfRows: 3
-  PeoplePerRow: 3
+  NoOfRows: 4
+  PeoplePerRow: 7
   CharacterWidth: 10
   CharacterHeight: 8
   SecondRowSpacing: 2
@@ -188,11 +188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Configuration:
-    Duration: 120
+    Duration: 60
     LevelId: 2
-    MaxLittleWaveDuration: 3
-    UpsetSpectatorsInterval: 5
-    PersuadeDuration: 1
+    MaxLittleWaveDuration: 10
+    UpsetSpectatorsInterval: 0.75
+    PersuadeDuration: 0.25
     NextLevelId: 3
     WaveThreshold: 0.25
 --- !u!82 &608926808
@@ -206,7 +206,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.496
   m_Pitch: 1
   Loop: 0
   Mute: 0
