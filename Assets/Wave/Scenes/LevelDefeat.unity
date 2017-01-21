@@ -478,6 +478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904852227}
   - component: {fileID: 1904852228}
+  - component: {fileID: 1904852230}
   - component: {fileID: 1904852229}
   m_Layer: 0
   m_Name: LevelDefeat
@@ -511,7 +512,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1168d8e5e09174b41acc0f51e17d26cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1904852229
+--- !u!114 &1904852229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1904852226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01740c30ed6c7458b9cb3c9fff56d969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Intro: {fileID: 8300000, guid: 70901c31883bc41b99dc370d4286b4be, type: 3}
+  Loop: {fileID: 0}
+--- !u!82 &1904852230
 AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -520,9 +534,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 70901c31883bc41b99dc370d4286b4be, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.752
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
