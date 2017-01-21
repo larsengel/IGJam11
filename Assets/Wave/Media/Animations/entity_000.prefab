@@ -83,8 +83,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1308226941705304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7058825, y: -3.2941177, z: -0.002}
-  m_LocalScale: {x: 1.62974, y: 1.05344, z: 1}
+  m_LocalPosition: {x: -5.7058825, y: -2.8547058, z: -0.002}
+  m_LocalScale: {x: 1.62974, y: 0.082248, z: 1}
   m_Children: []
   m_Father: {fileID: 4732231520839596}
   m_RootOrder: 2
@@ -151,14 +151,20 @@ AnimationClip:
       - serializedVersion: 2
         time: 0
         value: {x: -5.7058825, y: 6.470588, z: -0.001}
-        inSlope: {x: 0, y: 1.9518821, z: 0}
-        outSlope: {x: 0, y: 1.9518821, z: 0}
+        inSlope: {x: -0.07371577, y: 0.73557276, z: 0}
+        outSlope: {x: -0.07371577, y: 0.73557276, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 4.341
+        value: {x: -6.0258827, y: 9.66371, z: -0.001}
+        inSlope: {x: 0.10477109, y: 0.39279175, z: 0}
+        outSlope: {x: 0.10477109, y: 0.39279175, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 5
-        value: {x: -5.7058825, y: 16.23, z: -0.001}
-        inSlope: {x: 0, y: 1.9518821, z: 0}
-        outSlope: {x: 0, y: 1.9518821, z: 0}
+        value: {x: -5.8392158, y: 9.696667, z: -0.001}
+        inSlope: {x: 0.28325796, y: 0.050010744, z: 0}
+        outSlope: {x: 0.28325796, y: 0.050010744, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -169,21 +175,65 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: -5.7058825, y: -3.2941177, z: -0.002}
-        inSlope: {x: 0, y: 1.9529412, z: 0}
-        outSlope: {x: 0, y: 1.9529412, z: 0}
+        value: {x: -5.7058825, y: -2.8547058, z: -0.002}
+        inSlope: {x: 0, y: 1.8650589, z: 0}
+        outSlope: {x: 0, y: 1.8650589, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 5
         value: {x: -5.7058825, y: 6.470588, z: -0.002}
-        inSlope: {x: 0, y: 1.9529412, z: 0}
-        outSlope: {x: 0, y: 1.9529412, z: 0}
+        inSlope: {x: 0, y: 1.8650589, z: 0}
+        outSlope: {x: 0, y: 1.8650589, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     path: text_000
-  m_ScaleCurves: []
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1.629742, y: 1.05344, z: 1}
+        inSlope: {x: 0, y: -0.22775397, z: 0}
+        outSlope: {x: 0, y: -0.22775397, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 4.341
+        value: {x: 1.629742, y: 0.06476, z: 1}
+        inSlope: {x: 0, y: -0.13868882, z: 0}
+        outSlope: {x: 0, y: -0.13868882, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 5
+        value: {x: 1.629742, y: 0.032058, z: 1}
+        inSlope: {x: 0, y: -0.049623676, z: 0}
+        outSlope: {x: 0, y: -0.049623676, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: text
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1.62974, y: 0.082248, z: 1}
+        inSlope: {x: 0, y: 0.1942384, z: 0}
+        outSlope: {x: 0, y: 0.1942384, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 5
+        value: {x: 1.62974, y: 1.05344, z: 1}
+        inSlope: {x: 0, y: 0.1942384, z: 0}
+        outSlope: {x: 0, y: 0.1942384, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: text_000
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -201,6 +251,18 @@ AnimationClip:
       isPPtrCurve: 0
     - path: 823072473
       attribute: 1
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 999008199
+      attribute: 3
+      script: {fileID: 0}
+      classID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - path: 823072473
+      attribute: 3
       script: {fileID: 0}
       classID: 4
       customType: 0

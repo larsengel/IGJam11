@@ -12,9 +12,19 @@
                     <object_ref id="1" timeline="1" key="0" z_index="1"/>
                     <object_ref id="2" timeline="2" key="0" z_index="2"/>
                 </key>
-                <key id="1" time="5000">
+                <key id="1" time="226">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="0" z_index="2"/>
+                </key>
+                <key id="2" time="4341">
                     <object_ref id="0" timeline="0" key="0" z_index="0"/>
                     <object_ref id="1" timeline="1" key="1" z_index="1"/>
+                    <object_ref id="2" timeline="2" key="0" z_index="2"/>
+                </key>
+                <key id="3" time="5000">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="2" z_index="1"/>
                     <object_ref id="2" timeline="2" key="1" z_index="2"/>
                 </key>
             </mainline>
@@ -27,13 +37,16 @@
                 <key id="0" spin="0">
                     <object folder="0" file="1" x="-570.588235" y="647.058824" scale_x="1.629742" scale_y="1.05344"/>
                 </key>
-                <key id="1" time="5000" spin="0">
-                    <object folder="0" file="1" x="-570.588235" y="1623" scale_x="1.629742" scale_y="1.05344"/>
+                <key id="1" time="4341" spin="0">
+                    <object folder="0" file="1" x="-602.588235" y="966.370953" scale_x="1.629742" scale_y="0.06476"/>
+                </key>
+                <key id="2" time="5000" spin="0">
+                    <object folder="0" file="1" x="-583.921569" y="969.666667" scale_x="1.629742" scale_y="0.032058"/>
                 </key>
             </timeline>
             <timeline id="2" name="text_000">
                 <key id="0" spin="0">
-                    <object folder="0" file="1" x="-570.58824" y="-329.411765" scale_x="1.62974" scale_y="1.05344"/>
+                    <object folder="0" file="1" x="-570.58824" y="-285.470588" scale_x="1.62974" scale_y="0.082248"/>
                 </key>
                 <key id="1" time="5000" spin="0">
                     <object folder="0" file="1" x="-570.58824" y="647.05882" scale_x="1.62974" scale_y="1.05344"/>
