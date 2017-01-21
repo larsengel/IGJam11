@@ -6,7 +6,7 @@ public class SignText : MonoBehaviour
 
     void Start()
     {
-        GetComponent<MeshRenderer>().enabled = false;
+        //GetComponent<MeshRenderer>().enabled = false;
         GetComponent<TextMesh>().text = Texts[Random.Range(0, Texts.Length)];
     }
 }

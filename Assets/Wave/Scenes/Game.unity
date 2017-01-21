@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelSystem: {fileID: 1902887266}
+  LevelWonState: 6
 --- !u!1 &297368932
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da9ce978e872ea48b7a6e6f86d6fb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelDefeatScene: LevelDefeat
   LevelSystem: {fileID: 1902887266}
+  SpectatorSystem: {fileID: 776921100}
 --- !u!1 &685916640
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437d285ee43213e46aad010691b65d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelSystem: {fileID: 1902887266}
   Spectators: []
 --- !u!4 &776921101
 Transform:

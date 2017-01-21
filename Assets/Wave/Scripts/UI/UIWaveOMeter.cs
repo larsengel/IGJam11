@@ -1,26 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using Tobii.EyeX.Client;
+﻿using UnityEngine;
+
+using Wave.Levels;
 
 public class UIWaveOMeter : MonoBehaviour
 {
     public RectTransform Pointer;
 
-    [Range (0.0f, 1.0f)]
+    [Range(0.0f, 1.0f)]
     public float Value;
 
- 
-    // 0 ist 90 und 1 is -90
-    void Update ()
-    {
-        float euler_angle = 90.0f - (180.0f * Value);
-        Pointer.rotation = Quaternion.Euler (new Vector3 (0, 0, euler_angle));
-    }
+    private DefeatSystem defeatSystem;
 
-    void OnDrawGizmos ()
+    private void OnDrawGizmos()
     {
         //Update ();
+    }
+
+    private void Start()
+    {
+        this.defeatSystem = FindObjectOfType<DefeatSystem>();
+    }
+
+    // 0 ist 90 und 1 is -90
+    private void Update()
+    {
+        this.Value = this.defeatSystem != null ? this.defeatSystem.WaveRatio : 0.5f;
+
+        float euler_angle = 90.0f - (180.0f * this.Value);
+        this.Pointer.rotation = Quaternion.Euler(new Vector3(0, 0, euler_angle));
     }
 }

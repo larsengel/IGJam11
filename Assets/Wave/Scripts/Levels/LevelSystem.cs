@@ -1,6 +1,7 @@
 ﻿namespace Wave.Levels
 {
     using System;
+    using System.Collections;
 
     using UnityEngine;
     using UnityEngine.SceneManagement;
@@ -25,9 +26,22 @@
                 }
                 this.currentConfiguration = value;
 
-                this.OnLevelStarted();
+                if (this.currentConfiguration != null)
+                {
+                    StartCoroutine(DelayLevelStarted());
+                }
             }
         }
+
+        private IEnumerator DelayLevelStarted()
+        {
+            yield return new WaitForEndOfFrame();
+
+            this.IsLevelRunning = true;
+            this.OnLevelStarted();
+        }
+
+        public bool IsLevelRunning { get; private set; }
 
         public event Action LevelFinished;
 
@@ -103,6 +117,7 @@
             if (this.CurrentConfiguration != newLevelConfiguration)
             {
                 this.OnLevelFinished();
+                this.IsLevelRunning = false;
             }
         }
     }

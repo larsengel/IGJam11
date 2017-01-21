@@ -33,14 +33,10 @@
                 if (value)
                 {
                     this.BecameUpset.Invoke();
-                    transform.Find("audience").GetComponent<AudienceAnimations>().SetIdle();
                 }
                 else
                 {
                     this.BecameHappy.Invoke();
-                    var wave = Random.Range(1, 3) == 1 ? "left" : "right";
-
-                    transform.Find("audience").GetComponent<AudienceAnimations>().SetWave(wave);
                 }
             }
         }

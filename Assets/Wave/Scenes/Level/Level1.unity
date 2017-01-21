@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05285ac15b0f4ec98dd9891ee406a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudiencePrefab: {fileID: 1719517899885666, guid: 219f7f1016b919443bf80e9923ef7a08,
+  AudiencePrefab: {fileID: 1680480023894746, guid: 96e35c818b66b9a4ebcb4046e661f06a,
     type: 2}
   Audience: {fileID: 568527497}
   NoOfRows: 7
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Configuration:
-    Duration: 10
+    Duration: 120
     LevelId: 2
     MaxLittleWaveDuration: 3
     NextLevelId: 3

@@ -18,6 +18,11 @@
 
         private void MakeSpectatorUpset()
         {
+            if (this.SpectatorSystem.Spectators == null)
+            {
+                return;
+            }
+
             // Choose not upset spectator.
             var happySpectators = this.SpectatorSystem.Spectators.FindAll(spectator => !spectator.IsUpset).ToList();
             if (happySpectators.Count == 0)

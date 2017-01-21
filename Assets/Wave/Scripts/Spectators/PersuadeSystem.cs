@@ -14,6 +14,11 @@
 
         private void Update()
         {
+            if (this.SpectatorSystem.Spectators == null)
+            {
+                return;
+            }
+
             foreach (var spectator in this.SpectatorSystem.Spectators)
             {
                 if (!spectator.IsUpset)

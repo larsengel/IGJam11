@@ -6,7 +6,6 @@ public class SignTrumpText : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	    GetComponent<MeshRenderer>().enabled = false;
 	    var st = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	    var c = st[Random.Range(0, st.Length)];
 	    GetComponent<TextMesh>().text = c.ToString();

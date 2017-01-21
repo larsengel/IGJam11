@@ -376,7 +376,6 @@ GameObject:
   - component: {fileID: 4375165954897406}
   - component: {fileID: 95295201033409668}
   - component: {fileID: 114560488767716254}
-  - component: {fileID: 114133898086024266}
   - component: {fileID: 114078407577001938}
   m_Layer: 0
   m_Name: audience
@@ -1722,17 +1721,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4dd7571e7eb9ef419f10a03bb391483, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114133898086024266
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1719517899885666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff0b9df382a41ff4cb8ad1ff7ee6d6a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114173635475817844

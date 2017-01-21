@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sign : MonoBehaviour {
     private void Start()
     {
-        GetComponent<SpriteRenderer>().enabled = false;
+        //GetComponent<SpriteRenderer>().enabled = false;
     }
 
 
