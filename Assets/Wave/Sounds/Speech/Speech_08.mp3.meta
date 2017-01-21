@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 guid: 15b2d732f63c44fa5b621a102de529fd
-timeCreated: 1485016807
-=======
-guid: 609fa6efb96514a92a3793b5bdbd16c3
-timeCreated: 1485016738
->>>>>>> Stashed changes
-licenseType: Pro
 AudioImporter:
   serializedVersion: 6
   defaultSettings:
