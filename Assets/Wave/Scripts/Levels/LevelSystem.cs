@@ -1,49 +1,40 @@
 ﻿namespace Wave.Levels
 {
     using System;
-    using System.Collections;
 
     using UnityEngine;
     using UnityEngine.SceneManagement;
 
     public class LevelSystem : MonoBehaviour
     {
-        private LevelConfiguration currentConfiguration;
+        public enum LevelState
+        {
+            None,
+
+            Loaded,
+
+            Running,
+
+            Finished
+        }
 
         private Main main;
 
-        public LevelConfiguration CurrentConfiguration
+        public LevelConfiguration CurrentConfiguration { get; private set; }
+
+        public LevelState CurrentLevelState { get; private set; }
+
+        public bool IsLevelRunning
         {
             get
             {
-                return this.currentConfiguration;
-            }
-            private set
-            {
-                if (value == this.currentConfiguration)
-                {
-                    return;
-                }
-                this.currentConfiguration = value;
-
-                if (this.currentConfiguration != null)
-                {
-                    StartCoroutine(DelayLevelStarted());
-                }
+                return this.CurrentLevelState == LevelState.Running;
             }
         }
-
-        private IEnumerator DelayLevelStarted()
-        {
-            yield return new WaitForEndOfFrame();
-
-            this.IsLevelRunning = true;
-            this.OnLevelStarted();
-        }
-
-        public bool IsLevelRunning { get; private set; }
 
         public event Action LevelFinished;
+
+        public event Action LevelLoaded;
 
         public event Action LevelStarted;
 
@@ -56,6 +47,20 @@
             }
 
             this.main.SwitchState(loadLevel != GameStates.NONE ? loadLevel : GameStates.LEVEL1);
+        }
+
+        public void StartLevel()
+        {
+            switch (this.CurrentLevelState)
+            {
+                case LevelState.Loaded:
+                    this.CurrentLevelState = LevelState.Running;
+                    this.OnLevelStarted();
+                    break;
+                default:
+                    Debug.LogWarningFormat("Invalid state to start level: {0}", this.CurrentLevelState);
+                    break;
+            }
         }
 
         public void StartNextLevel()
@@ -72,6 +77,15 @@
         protected virtual void OnLevelFinished()
         {
             var handler = this.LevelFinished;
+            if (handler != null)
+            {
+                handler();
+            }
+        }
+
+        protected virtual void OnLevelLoaded()
+        {
+            var handler = this.LevelLoaded;
             if (handler != null)
             {
                 handler();
@@ -107,7 +121,16 @@
         {
             var newLevel = FindObjectOfType<LevelBehaviour>();
             var newLevelConfiguration = newLevel != null ? newLevel.Configuration : null;
-            this.CurrentConfiguration = newLevelConfiguration;
+
+            if (newLevelConfiguration != this.CurrentConfiguration)
+            {
+                this.CurrentConfiguration = newLevelConfiguration;
+                if (newLevelConfiguration != null)
+                {
+                    this.CurrentLevelState = LevelState.Loaded;
+                    this.OnLevelLoaded();
+                }
+            }
         }
 
         private void OnSceneUnloaded(Scene arg0)
@@ -116,8 +139,8 @@
             var newLevelConfiguration = newLevel != null ? newLevel.Configuration : null;
             if (this.CurrentConfiguration != newLevelConfiguration)
             {
+                this.CurrentLevelState = LevelState.Finished;
                 this.OnLevelFinished();
-                this.IsLevelRunning = false;
             }
         }
     }
