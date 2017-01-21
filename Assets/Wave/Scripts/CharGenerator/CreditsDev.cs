@@ -27,9 +27,13 @@ public class CreditsDev : MonoBehaviour
         CharGenerator.Search(charGenerator.transform, "Nose").GetComponent<SpriteRenderer>().sprite = nose;
         CharGenerator.Search(charGenerator.transform, "Mouth").GetComponent<SpriteRenderer>().sprite = mouth;
 
-        CharGenerator.Search(charGenerator.transform, "text_left").GetComponent<TextMesh>().text = devName;
-        CharGenerator.Search(charGenerator.transform, "text_left").GetComponent<MeshRenderer>().enabled = true;
-        CharGenerator.Search(charGenerator.transform, "schild_left").GetComponent<SpriteRenderer>().enabled = true;
+
+        CharGenerator.Search(charGenerator.transform, "schild_left").gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.01f);
+
+        var textLeft = CharGenerator.Search(charGenerator.transform, "text_left");
+        textLeft.GetComponent<TextMesh>().text = devName;
+        textLeft.GetComponent<MeshRenderer>().enabled = true;
         CharGenerator.Search(charGenerator.transform, "audience").GetComponent<Animator>().SetTrigger("wave_left");
 
         CharGenerator.Search(charGenerator.transform, "text_right").GetComponent<MeshRenderer>().enabled = false;
