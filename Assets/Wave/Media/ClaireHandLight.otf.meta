@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 3675c149fd782a348b2f3a65804c0019
+timeCreated: 1485023278
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Claire Hand
+  fontNames:
+  - Claire Hand
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

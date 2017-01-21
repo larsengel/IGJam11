@@ -637,7 +637,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719517899885666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -31.52, y: 4.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4997885890421886}
@@ -982,7 +982,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3675c149fd782a348b2f3a65804c0019, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1044,7 +1044,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3675c149fd782a348b2f3a65804c0019, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1798,9 +1798,9 @@ TextMesh:
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 181
-  m_FontStyle: 2
+  m_FontStyle: 3
   m_RichText: 1
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 12800000, guid: 3675c149fd782a348b2f3a65804c0019, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1821,7 +1821,7 @@ TextMesh:
   m_FontSize: 181
   m_FontStyle: 2
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 3675c149fd782a348b2f3a65804c0019, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1840,7 +1840,7 @@ TextMesh:
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 500
-  m_FontStyle: 2
+  m_FontStyle: 3
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 2bb84bd7a89de4d84a1dd41468b6dbbe, type: 3}
   m_Color:
@@ -1863,6 +1863,10 @@ MonoBehaviour:
   - AMERICA!
   - U  S  A
   - FREEDOM
+  - I was here
+  - Donald <3
+  - Trumpence
+  - You are gr8!
 --- !u!114 &114078407577001938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1921,6 +1925,10 @@ MonoBehaviour:
   - AMERICA!
   - U  S  A
   - FREEDOM
+  - I was here
+  - Donald <3
+  - Trumpence
+  - You are gr8!
 --- !u!114 &114221726370668928
 MonoBehaviour:
   m_ObjectHideFlags: 1
