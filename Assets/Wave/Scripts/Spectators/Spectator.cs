@@ -13,6 +13,8 @@
 
         public float PersuadeFactor;
 
+        public float PersuadeDuration;
+
         private bool isUpset;
 
         public bool IsUpset
