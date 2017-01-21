@@ -1,22 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+
 using Wave;
 
 public class UIStartGame : MonoBehaviour
 {
-
     public Main Main;
 
-    void Awake ()
+    public void OnButtonClick()
     {
-        Main = GameObject.Find ("Main").GetComponent<Main> ();
+        this.Main.StartGame();
     }
 
-    public void OnButtonClick ()
+    private void Awake()
     {
-        Main.StartGame ();
+        this.Main = FindObjectOfType<Main>();
     }
-
 }

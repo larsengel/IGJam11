@@ -1,22 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+
 using Wave;
 
 public class UICredits : MonoBehaviour
 {
-
     public Main Main;
 
-    void Awake ()
+    public void OnButtonClick()
     {
-        Main = GameObject.Find ("Main").GetComponent<Main> ();
+        this.Main.ShowCredits();
     }
 
-    public void OnButtonClick ()
+    private void Awake()
     {
-        Main.ShowCredits ();
+        this.Main = FindObjectOfType<Main>();
     }
-
 }

@@ -6,6 +6,8 @@ using UnityEngine;
 
 namespace Tobii.EyeTracking
 {
+    using UnityEngine.EventSystems;
+
     [AddComponentMenu("Eye Tracking/Gaze Aware")]
     public class GazeAware : MonoBehaviour, IGazeFocusable
     {
@@ -15,9 +17,15 @@ namespace Tobii.EyeTracking
         /// </summary>
         public bool HasGazeFocus { get; private set; }
 
+        private RectTransform rectTransform;
+
+        void Start()
+        {
+            rectTransform = GetComponent<RectTransform>();
+        }
+
         void OnEnable()
         {
-            WarnIfAttachedToUIElement();
             GazeFocusHandler().RegisterFocusableComponent(this);
         }
 
@@ -25,10 +33,20 @@ namespace Tobii.EyeTracking
         {
             GazeFocusHandler().UnregisterFocusableComponent(this);
         }
-
-        void Reset()
+        
+        void Update()
         {
-            WarnIfAttachedToUIElement();
+            if (this.rectTransform == null)
+            {
+                return;
+            }
+            var gazePoint = EyeTracking.GetGazePoint();
+            var gazePosition = Input.mousePosition;
+            if (gazePoint.IsValid)
+            {
+                gazePosition = gazePoint.GUI;
+            }
+            this.HasGazeFocus = RectTransformUtility.RectangleContainsScreenPoint(this.rectTransform, gazePosition);
         }
 
         /// <summary>
@@ -45,32 +63,10 @@ namespace Tobii.EyeTracking
         {
             HasGazeFocus = hasFocus;
         }
-
-        /// <summary>
-        /// Logs a warning if the Gaze Aware component seems to have been attached
-        /// to a UI element (which is not supported).
-        /// </summary>
-        private void WarnIfAttachedToUIElement()
-        {
-            if (IsAttachedToUIElement())
-            {
-                Debug.LogWarning("It seems a Gaze Aware component has been attached to a UI element, which is not supported. Gaze focus can only be detected on 3D and 2D GameObjects with a Collider.");
-            }
-        }
-
+        
         private IRegisterGazeFocusable GazeFocusHandler()
         {
             return (IRegisterGazeFocusable)EyeTrackingHost.GetInstance().GazeFocus;
-        }
-
-        private bool IsAttachedToUIElement()
-        {
-            if (GetComponent<RectTransform>() != null)
-            {
-                return true;
-            }
-
-            return false;
         }
     }
 }
