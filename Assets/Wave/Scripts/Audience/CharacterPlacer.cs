@@ -18,9 +18,6 @@ public class CharacterPlacer : MonoBehaviour
     [Tooltip ("every second row is offset between 0 and this")] 
     public float SecondRowSpacing;
 
-    [Range (0.0f, 1.0f)]
-    public float EmptySeatsFactor;
-
 
     //public float CharacterSpacing;
 

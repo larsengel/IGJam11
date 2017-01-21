@@ -9,6 +9,9 @@
     {
         public GameObject AudiencePrefab;
 
+        [Range(0.0f, 1.0f)]
+        public float EmptySeatsFactor = 0.1f;
+
         public LevelSystem LevelSystem;
 
         private void OnDisable()
@@ -74,10 +77,12 @@
                 for (int x = -audienceConfiguration.seatStartId; x < audienceConfiguration.seatMaxId; x++)
                 {
                     // Seat may stay empty
-                    if (Random.Range(0.0f, 1.0f) < audienceConfiguration.EmptySeatsFactor)
+                    if (Random.Range(0.0f, 1.0f) < this.EmptySeatsFactor)
                     {
-                        this.RenderActor(audienceConfiguration, x, y);
+                        continue;
                     }
+
+                    this.RenderActor(audienceConfiguration, x, y);
                 }
             }
         }
