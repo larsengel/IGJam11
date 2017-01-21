@@ -805,26 +805,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114078407577001938, guid: 219f7f1016b919443bf80e9923ef7a08,
-        type: 2}
-      propertyPath: Eyes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114078407577001938, guid: 219f7f1016b919443bf80e9923ef7a08,
-        type: 2}
-      propertyPath: Noses.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114078407577001938, guid: 219f7f1016b919443bf80e9923ef7a08,
-        type: 2}
-      propertyPath: Hairs.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114078407577001938, guid: 219f7f1016b919443bf80e9923ef7a08,
-        type: 2}
-      propertyPath: Mouths.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4375165954897406, guid: 219f7f1016b919443bf80e9923ef7a08, type: 2}
       propertyPath: m_LocalPosition.x
       value: 6.2

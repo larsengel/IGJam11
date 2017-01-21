@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4535005430236012}
   - component: {fileID: 212786711086852198}
   m_Layer: 0
-  m_Name: B_haare
+  m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 4401360340776778}
   - component: {fileID: 212182838454355902}
   m_Layer: 0
-  m_Name: B_kinn
+  m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 4602030102099072}
   - component: {fileID: 212007634949591688}
   m_Layer: 0
-  m_Name: B_nase
+  m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 4028167810499992}
   - component: {fileID: 212887976121362712}
   m_Layer: 0
-  m_Name: B_augen
+  m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1377,10 +1377,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad462b97da086bf4f9ce96580cdd6b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Eyes: []
-  Noses: []
-  Mouths: []
-  Hairs: []
+  Eyes:
+  - {fileID: 21300000, guid: e1e920f38ce0a2d4c8402d8fff47970c, type: 3}
+  - {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
+  Noses:
+  - {fileID: 21300000, guid: fcbc3bf10970719499d986c8acf800a0, type: 3}
+  - {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
+  Mouths:
+  - {fileID: 21300000, guid: 015b003c288c93749b6a26f56d645132, type: 3}
+  - {fileID: 21300000, guid: 9bd91fe5537b7f645b41878d86eb18c2, type: 3}
+  Hairs:
+  - {fileID: 21300000, guid: f456df8c62440624f99cc28273bf631d, type: 3}
+  - {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
 --- !u!114 &114133898086024266
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,11 +1,9 @@
 ﻿using System;
 using UnityEngine;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class CharGenerator : MonoBehaviour
 {
-    private const int People = 12;
-
     public Sprite[] Eyes;
     public Sprite[] Noses;
     public Sprite[] Mouths;
@@ -18,18 +16,30 @@ public class CharGenerator : MonoBehaviour
 
     void createFace()
     {
-        Random rnd = new Random();
-
-        var nose = Noses[rnd.Next(0, Noses.Length)];
-        var eyes = Eyes[rnd.Next(0, Eyes.Length)];
-        var mouth = Mouths[rnd.Next(0, Mouths.Length)];
-        var hair = Hairs[rnd.Next(0, Hairs.Length)];
+        var nose = Noses[Random.Range(0, Noses.Length)];
+        var eyes = Eyes[Random.Range(0, Eyes.Length)];
+        var mouth = Mouths[Random.Range(0, Mouths.Length)];
+        var hair = Hairs[Random.Range(0, Hairs.Length)];
 
 
-        transform.Find("Eyes").GetComponent<SpriteRenderer>().sprite = eyes;
-        transform.Find("Nose").GetComponent<SpriteRenderer>().sprite = nose;
-        transform.Find("Mouth").GetComponent<SpriteRenderer>().sprite = mouth;
-        transform.Find("Hair").GetComponent<SpriteRenderer>().sprite = hair;
+        Search(transform, "Eyes").GetComponent<SpriteRenderer>().sprite = eyes;
+        Search(transform, "Nose").GetComponent<SpriteRenderer>().sprite = nose;
+        Search(transform, "Mouth").GetComponent<SpriteRenderer>().sprite = mouth;
+        Search(transform, "Hair").GetComponent<SpriteRenderer>().sprite = hair;
 
+    }
+
+    public static Transform Search(Transform target, string name)
+    {
+        if (target.name == name) return target;
+
+        for (int i = 0; i < target.childCount; ++i)
+        {
+            var result = Search(target.GetChild(i), name);
+
+            if (result != null) return result;
+        }
+
+        return null;
     }
 }
