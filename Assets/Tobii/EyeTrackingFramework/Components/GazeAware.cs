@@ -44,7 +44,7 @@ namespace Tobii.EyeTracking
             var gazePosition = Input.mousePosition;
             if (gazePoint.IsValid)
             {
-                gazePosition = gazePoint.GUI;
+                gazePosition = gazePoint.Screen;
             }
             this.HasGazeFocus = RectTransformUtility.RectangleContainsScreenPoint(this.rectTransform, gazePosition);
         }
