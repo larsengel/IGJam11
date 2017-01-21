@@ -7,7 +7,7 @@ public class MaterialColor : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-	    var color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 0);
+	    var color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
         setColors(transform, "clothes", color);
 	}
 
@@ -18,9 +18,8 @@ public class MaterialColor : MonoBehaviour {
             setColors(tr, tag, color);
             if(tr.CompareTag("clothes"))
             {
-                var renderer =  tr.GetComponent<Renderer>();
-                renderer.material.shader = Shader.Find (" Glossy");
-                renderer.material.SetColor ("_SpecColor", color);
+                var renderer =  tr.GetComponent<SpriteRenderer>();
+                renderer.color = color;
             }
         }
     }
