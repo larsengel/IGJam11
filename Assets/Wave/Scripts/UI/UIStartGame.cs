@@ -8,7 +8,7 @@ public class UIStartGame : MonoBehaviour
 
     public void OnButtonClick()
     {
-        this.Main.StartGame();
+        this.Main.SwitchState(GameStates.TUTORIAL);
     }
 
     private void Awake()

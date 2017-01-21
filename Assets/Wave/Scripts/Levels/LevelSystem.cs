@@ -141,6 +141,14 @@
             {
                 this.CurrentLevelState = LevelState.Finished;
                 this.OnLevelFinished();
+
+                this.CurrentConfiguration = newLevelConfiguration;
+
+                if (this.CurrentConfiguration != null)
+                {
+                    this.CurrentLevelState = LevelState.Loaded;
+                    this.OnLevelLoaded();
+                }
             }
         }
     }

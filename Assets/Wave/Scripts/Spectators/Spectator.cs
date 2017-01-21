@@ -11,6 +11,7 @@
 
         public float PersuadeFactor;
 
+        [SerializeField]
         private bool isUpset = true;
 
         public float ShowSignFactor { get; set; }
