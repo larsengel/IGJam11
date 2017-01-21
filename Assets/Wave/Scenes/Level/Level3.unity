@@ -240,6 +240,7 @@ MonoBehaviour:
   AudiencePrefab: {fileID: 1680480023894746, guid: 96e35c818b66b9a4ebcb4046e661f06a,
     type: 2}
   Audience: {fileID: 568527497}
+  CurrentLevelBehaviour: {fileID: 608926807}
   NoOfRows: 3
   PeoplePerRow: 5
   CharacterWidth: 10
