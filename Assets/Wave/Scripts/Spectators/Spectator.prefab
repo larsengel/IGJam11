@@ -363,6 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4505107426209662}
   - component: {fileID: 114040314980610966}
+  - component: {fileID: 114232755814390232}
   m_Layer: 0
   m_Name: Spectator
   m_TagString: Untagged
@@ -1199,6 +1200,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d87d489c55fc504987b709bbe1e4ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114232755814390232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1680480023894746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a6a0831036b4e31922018b9b8d1b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HappyParticlePrefab: {fileID: 1575641825355980, guid: bbb1780a7a0534fdeb89f374468d78dd,
+    type: 2}
+  UpsetParticlePrefab: {fileID: 1669489901144448, guid: abcf0c698b4ec4daca8806ded81f7dfe,
+    type: 2}
 --- !u!114 &114357608172818146
 MonoBehaviour:
   m_ObjectHideFlags: 1
