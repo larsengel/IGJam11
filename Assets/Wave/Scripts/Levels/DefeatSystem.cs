@@ -16,6 +16,18 @@
 
         private float remainingLittleWaveDuration;
 
+        public float RemainingStaminaRatio
+        {
+            get
+            {
+                if (!this.LevelSystem.IsLevelRunning)
+                {
+                    return 1.0f;
+                }
+                return this.remainingLittleWaveDuration / this.LevelSystem.CurrentConfiguration.MaxLittleWaveDuration;
+            }
+        }
+
         public float WaveRatio { get; private set; }
 
         private float ComputeWaveRatio()
