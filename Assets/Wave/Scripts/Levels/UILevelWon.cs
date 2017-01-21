@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-namespace Wave.Levels
+﻿namespace Wave.Levels
 {
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.UI;
+
     public class UILevelWon : MonoBehaviour
     {
         public Text scoreText;
@@ -18,9 +18,10 @@ namespace Wave.Levels
             statsSystem = FindObjectOfType<StatsSystem>();
             if (statsSystem != null)
             {
-                scoreText.text = string.Format("Score: {0} %", Mathf.RoundToInt(statsSystem.AvaragePoints * 100));
+                var score = statsSystem.AvaragePoints;
+                scoreText.text = string.Format("Score: {0} %", Mathf.RoundToInt(score * 100));
+                newspapers[Random.Range(0, newspapers.Count)].Init(true, score);
             }
-            newspapers[Random.Range(0, newspapers.Count)].Init(true);
         }
 
         public void GoToNextLevel()
