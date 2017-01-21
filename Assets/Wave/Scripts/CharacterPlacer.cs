@@ -35,8 +35,10 @@ public class CharacterPlacer : MonoBehaviour
     [Header ("Scaling")]
 
     [Range (0.0f, 1.0f)]
+    [Tooltip ("Minimum Individual Scale")]
     public float MinimumScale;
     [Range (1.0f, 2.0f)]
+    [Tooltip ("Maximum Individual Scale")]
     public float MaximumScale;
 
     [Range (0.0f, 1.0f)]
