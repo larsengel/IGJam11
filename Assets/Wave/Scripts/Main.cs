@@ -50,6 +50,8 @@ namespace Wave
     {
         public static Main Instance { get; private set; }
 
+        public int LevelCount = 9;
+
         GameState current_state;
 
         AssetProvider AssetProvider;
@@ -67,15 +69,10 @@ namespace Wave
             AssetProvider = GetComponent<AssetProvider> ();
 
             states.Add (GameStates.START, new GameState (GameStates.START, "Start", start_assets));
-            states.Add (GameStates.LEVEL1, new GameState (GameStates.LEVEL1, "Level1", new List<string>() { "Game", "Level1", "InGameUI" }));
-            states.Add (GameStates.LEVEL2, new GameState (GameStates.LEVEL2, "Level2", new List<string>() { "Game", "Level2", "InGameUI" }));
-            states.Add(GameStates.LEVEL3, new GameState(GameStates.LEVEL3, "Level3", new List<string>() { "Game", "Level3", "InGameUI" }));
-            states.Add(GameStates.LEVEL4, new GameState(GameStates.LEVEL4, "Level4", new List<string>() { "Game", "Level4", "InGameUI" }));
-            states.Add(GameStates.LEVEL5, new GameState(GameStates.LEVEL5, "Level5", new List<string>() { "Game", "Level5", "InGameUI" }));
-            states.Add(GameStates.LEVEL6, new GameState(GameStates.LEVEL6, "Level6", new List<string>() { "Game", "Level6", "InGameUI" }));
-            states.Add(GameStates.LEVEL7, new GameState(GameStates.LEVEL7, "Level7", new List<string>() { "Game", "Level7", "InGameUI" }));
-            states.Add(GameStates.LEVEL8, new GameState(GameStates.LEVEL8, "Level8", new List<string>() { "Game", "Level8", "InGameUI" }));
-            states.Add(GameStates.LEVEL9, new GameState(GameStates.LEVEL9, "Level9", new List<string>() { "Game", "Level9", "InGameUI" }));
+            for (var levelIndex = 0; levelIndex < LevelCount; levelIndex++)
+            {
+                AddLevelState(levelIndex);
+            }
             states.Add (GameStates.END, new GameState (GameStates.END, "End", end_assets));
             states.Add(GameStates.CREDITS, new GameState(GameStates.CREDITS, "Credits", credits_assets));
             this.states.Add(
@@ -94,6 +91,13 @@ namespace Wave
             }
 
             Instance = this;
+        }
+
+        private void AddLevelState(int levelIndex)
+        {
+            var levelGameState = GameStates.LEVEL1 + levelIndex;
+            var levelName = "Level" + (levelIndex + 1);
+            states.Add(levelGameState, new GameState(levelGameState, levelName, new List<string>() { "Game", "InGameUI", levelName }));
         }
 
         /**
