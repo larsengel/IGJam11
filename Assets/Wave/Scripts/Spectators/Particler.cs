@@ -9,6 +9,9 @@ public class Particler : MonoBehaviour
     public GameObject UpsetParticlePrefab;
     public GameObject HappyHaloPrefab;
 
+    public AudioClip PowerUpSound;
+    public AudioClip HappySound;
+
     public float Duration { get; set; }
 
     public HappyHalo HappyHalo;
@@ -23,13 +26,22 @@ public class Particler : MonoBehaviour
         HappyHalo.transform.localPosition = Vector3.zero;
         HappyHalo.SpeedFactor = Duration;
 
+        var AudioSource = GetComponent<AudioSource> ();
+        AudioSource.clip = PowerUpSound;
+        AudioSource.Play ();
+
         return HappyHalo;
     }
 
-
-    public void OnFocusEffekt ()
+    public void DestroyHalo ()
     {
-       
+        if (!HappyHalo == null) {
+            Destroy (HappyHalo.gameObject);    
+            HappyHalo = null;
+        }
+
+        var AudioSource = GetComponent<AudioSource> ();
+        AudioSource.Stop ();
     }
 
     public void ShowHappy ()
@@ -37,6 +49,10 @@ public class Particler : MonoBehaviour
         var pos = transform.position;
         var particle = Instantiate (HappyParticlePrefab, pos, Quaternion.identity);
         Destroy (particle, 2.0f);
+
+        var AudioSource = GetComponent<AudioSource> ();
+        AudioSource.clip = HappySound;
+        AudioSource.Play ();
     }
 
     public void ShowUpset ()

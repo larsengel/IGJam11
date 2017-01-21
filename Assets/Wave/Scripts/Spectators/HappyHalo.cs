@@ -18,22 +18,14 @@ public class HappyHalo : MonoBehaviour
     void Awake ()
     {
         Light = GetComponent<Light> ();
-
     }
 	
     // Update is called once per frame
     public void PlayEffect ()
     {
-        //if (running) {
         Light.intensity = Intensity.Evaluate (time);
         time += Time.deltaTime / SpeedFactor;
-        //}
     }
 
-    public void TriggerEffect ()
-    {
-        running = true;
-        time = 0;
-        Destroy (gameObject, KillTime);
-    }
+   
 }

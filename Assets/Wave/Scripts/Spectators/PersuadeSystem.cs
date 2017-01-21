@@ -27,16 +27,19 @@
             }
 
             foreach (var spectator in this.SpectatorSystem.Spectators) {
+
+                var particler = spectator.GetComponent<Particler> ();
+
                 if (!spectator.IsUpset) {
                     continue;
                 }
 
                 if (!spectator.IsPursuading) {
                     // hier beendern wir den partciler halo
+                    particler.DestroyHalo ();
                     continue;
                 }
 
-                var particler = spectator.GetComponent<Particler> ();
                 particler.CreateHalo ().PlayEffect ();
 
                 // effekt laufen lassen 
