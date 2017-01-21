@@ -319,7 +319,7 @@ Prefab:
     - target: {fileID: 224119096927652098, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 101
+      value: 99.27611
       objectReference: {fileID: 0}
     - target: {fileID: 114787960518514096, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
@@ -437,7 +437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devName: Devname
+  foobar: 
+  devName: Lars
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
@@ -577,7 +578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devName: Devname
+  foobar: 
+  devName: Steffen
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
@@ -623,7 +625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devName: Devname
+  foobar: 
+  devName: Christian
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
@@ -837,7 +840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devName: Devname
+  foobar: 
+  devName: Andrea
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
@@ -883,7 +887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devName: Devname
+  foobar: 
+  devName: Max
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
@@ -1028,6 +1033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foobar: 
   devName: Marco
   hair: {fileID: 21300000, guid: f456df8c62440624f99cc28273bf631d, type: 3}
   eyes: {fileID: 21300000, guid: 36cc5bbe185cdac4291babdb37da6153, type: 3}
@@ -1074,7 +1080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devName: Devname
+  foobar: 
+  devName: Michael
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
