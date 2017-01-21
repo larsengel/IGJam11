@@ -17,14 +17,30 @@ public class AudienceAnimations : MonoBehaviour
 	    switch (state)
 	    {
 	        case 1:
-	            animator.SetTrigger("idle");
+	            SetIdle();
 	            break;
 	        case 2:
-	            animator.SetTrigger("wave_left");
+	            SetWave("left");
 	            break;
 	        case 3:
-	            animator.SetTrigger("wave_right");
+	            SetWave("right");
 	            break;
 	    }
 	}
+
+    public void SetWave(string direction)
+    {
+        if (direction == "left")
+        {
+            animator.SetTrigger("wave_left");
+        } else if (direction == "right")
+        {
+            animator.SetTrigger("wave_right");
+        }
+    }
+
+    public void SetIdle()
+    {
+        animator.SetTrigger("idle");
+    }
 }
