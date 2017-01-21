@@ -46,7 +46,6 @@ namespace Wave.Levels
             while (true)
             {
                 yield return new WaitForSeconds(1);
-                Debug.Log(defeatSystem.WaveRatio + "-> defeatSystem.WaveRatio");
                 pointsHistory.Add(defeatSystem.WaveRatio);
             }
         }
