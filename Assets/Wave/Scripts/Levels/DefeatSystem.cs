@@ -4,9 +4,15 @@
 
     public class DefeatSystem : MonoBehaviour
     {
+        public string LevelDefeatScene = "LevelDefeat";
+
         public LevelSystem LevelSystem;
 
-        public string LevelDefeatScene = "LevelDefeat";
+        [ContextMenu("Loose Level")]
+        private void LooseLevel()
+        {
+            Main.Instance.SwitchState(GameStates.LEVEL_DEFEAT);
+        }
 
         private void Reset()
         {

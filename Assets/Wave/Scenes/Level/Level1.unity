@@ -186,7 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Configuration:
-    Duration: 2
+    Duration: 10
+    LevelId: 2
     MaxLittleWaveDuration: 3
     NextLevelId: 3
     WaveThreshold: 0.25

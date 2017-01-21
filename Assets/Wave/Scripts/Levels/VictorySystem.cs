@@ -43,7 +43,13 @@
         private void OnEnable()
         {
             this.LevelSystem.LevelStarted += this.OnLevelStarted;
+            this.LevelSystem.LevelFinished += this.OnLevelFinished;
             this.main = FindObjectOfType<Main>();
+        }
+
+        private void OnLevelFinished()
+        {
+            this.levelOverTime = float.MaxValue;
         }
 
         private void OnLevelStarted()

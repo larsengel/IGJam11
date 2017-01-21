@@ -29,7 +29,20 @@
             }
         }
 
+        public event Action LevelFinished;
+
         public event Action LevelStarted;
+
+        public void RestartLevel()
+        {
+            var loadLevel = GameStates.LEVEL1;
+            if (this.CurrentConfiguration != null)
+            {
+                loadLevel = this.CurrentConfiguration.LevelId;
+            }
+
+            this.main.SwitchState(loadLevel != GameStates.NONE ? loadLevel : GameStates.LEVEL1);
+        }
 
         public void StartNextLevel()
         {
@@ -40,6 +53,15 @@
             }
 
             this.main.SwitchState(newLevel != GameStates.NONE ? newLevel : GameStates.GAME_FINISHED);
+        }
+
+        protected virtual void OnLevelFinished()
+        {
+            var handler = this.LevelFinished;
+            if (handler != null)
+            {
+                handler();
+            }
         }
 
         protected virtual void OnLevelStarted()
@@ -54,6 +76,7 @@
         private void OnDisable()
         {
             SceneManager.sceneLoaded -= this.OnSceneLoaded;
+            SceneManager.sceneUnloaded -= this.OnSceneUnloaded;
         }
 
         private void OnEnable()
@@ -61,6 +84,7 @@
             var currentLevel = FindObjectOfType<LevelBehaviour>();
             this.CurrentConfiguration = currentLevel != null ? currentLevel.Configuration : null;
             SceneManager.sceneLoaded += this.OnSceneLoaded;
+            SceneManager.sceneUnloaded += this.OnSceneUnloaded;
 
             this.main = FindObjectOfType<Main>();
         }
@@ -70,6 +94,16 @@
             var newLevel = FindObjectOfType<LevelBehaviour>();
             var newLevelConfiguration = newLevel != null ? newLevel.Configuration : null;
             this.CurrentConfiguration = newLevelConfiguration;
+        }
+
+        private void OnSceneUnloaded(Scene arg0)
+        {
+            var newLevel = FindObjectOfType<LevelBehaviour>();
+            var newLevelConfiguration = newLevel != null ? newLevel.Configuration : null;
+            if (this.CurrentConfiguration != newLevelConfiguration)
+            {
+                this.OnLevelFinished();
+            }
         }
     }
 }

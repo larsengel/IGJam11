@@ -15,6 +15,12 @@
         public float Duration = 10.0f;
 
         /// <summary>
+        ///   Id of this level.
+        /// </summary>
+        [Tooltip("Id of this level")]
+        public GameStates LevelId;
+
+        /// <summary>
         ///   Maximum duration with little wave activity before level is lost (in s).
         /// </summary>
         [Tooltip("Maximum duration with little wave activity before level is lost (in s)")]

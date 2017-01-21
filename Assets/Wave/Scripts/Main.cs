@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace Wave
 {
+    using System.Linq;
+
     using UnityEngine.SceneManagement;
 
     public enum GameStates
@@ -39,6 +41,7 @@ namespace Wave
 
     public class Main : MonoBehaviour
     {
+        public static Main Instance { get; private set; }
 
         GameState current_state;
 
@@ -65,18 +68,20 @@ namespace Wave
             states.Add(GameStates.CREDITS, new GameState(GameStates.CREDITS, "Credits", credits_assets));
             this.states.Add(
                 GameStates.LEVEL_WON,
-                new GameState(GameStates.LEVEL_WON, "LevelWon", new List<string>() { "LevelWon" }));
+                new GameState(GameStates.LEVEL_WON, "LevelWon", new List<string>() { "Game", "LevelWon" }));
             this.states.Add(
                 GameStates.LEVEL_DEFEAT,
-                new GameState(GameStates.LEVEL_DEFEAT, "LevelDefeat", new List<string>() { "LevelDefeat" }));
+                new GameState(GameStates.LEVEL_DEFEAT, "LevelDefeat", new List<string>() { "Game", "LevelDefeat" }));
             this.states.Add(
                 GameStates.GAME_FINISHED,
-                new GameState(GameStates.GAME_FINISHED, "GameFinished", new List<string>() { "GameFinished" }));
+                new GameState(GameStates.GAME_FINISHED, "GameFinished", new List<string>() { "Game", "GameFinished" }));
 
             if (SceneManager.sceneCount <= 1)
             {
                 SwitchState(GameStates.START);
             }
+
+            Instance = this;
         }
 
         /**
@@ -86,16 +91,19 @@ namespace Wave
 
         public void SwitchState (GameStates new_state)
         {
-            if (current_state != null) {
+            GameState state = states[new_state];
 
-                foreach (var asset_id in current_state.Assets) {
+            var loadAssets = current_state != null ? state.Assets.Except(current_state.Assets) : state.Assets;
+            var unloadAssets = current_state != null ? current_state.Assets.Except(state.Assets) : null;
+
+            if (unloadAssets != null) {
+
+                foreach (var asset_id in unloadAssets) {
                     AssetProvider.UnloadAsset (asset_id);    
                 }
-            }
-                
-            GameState state = states [new_state];
+            }  
 
-            foreach (var asset_id in state.Assets) {
+            foreach (var asset_id in loadAssets) {
                 AssetProvider.LoadAssetAsync (asset_id);
             }
            
