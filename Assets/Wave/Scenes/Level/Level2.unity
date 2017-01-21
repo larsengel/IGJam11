@@ -138,6 +138,8 @@ MonoBehaviour:
     Duration: 2
     LevelId: 3
     MaxLittleWaveDuration: 3
+    UpsetSpectatorsInterval: 1
+    PersuadeDuration: 1
     NextLevelId: 0
     WaveThreshold: 0.25
 --- !u!114 &1369237690
@@ -164,7 +166,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.488
   m_Pitch: 1
   Loop: 0
   Mute: 0
