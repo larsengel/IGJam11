@@ -134,10 +134,10 @@ MonoBehaviour:
   AudiencePrefab: {fileID: 1680480023894746, guid: 96e35c818b66b9a4ebcb4046e661f06a,
     type: 2}
   Audience: {fileID: 568527497}
-  NoOfRows: 7
-  PeoplePerRow: 7
-  CharacterWidth: 5
-  CharacterHeight: 4
+  NoOfRows: 3
+  PeoplePerRow: 3
+  CharacterWidth: 10
+  CharacterHeight: 8
   SecondRowSpacing: 2
   EmptySeatsFactor: 0.728
   MinimumScale: 0.8
@@ -191,6 +191,8 @@ MonoBehaviour:
     Duration: 120
     LevelId: 2
     MaxLittleWaveDuration: 3
+    UpsetSpectatorsInterval: 5
+    PersuadeDuration: 1
     NextLevelId: 3
     WaveThreshold: 0.25
 --- !u!82 &608926808

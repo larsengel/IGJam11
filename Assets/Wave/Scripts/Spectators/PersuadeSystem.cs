@@ -2,15 +2,25 @@
 {
     using UnityEngine;
 
+    using Wave.Levels;
+
     public class PersuadeSystem : MonoBehaviour
     {
-        /// <summary>
-        ///   Duration till a spectator is persuaded (in s).
-        /// </summary>
-        [Tooltip("Duration till a spectator is persuaded (in s)")]
-        public float PersuadeDuration = 1;
+        public LevelSystem LevelSystem;
 
         public SpectatorSystem SpectatorSystem;
+
+        private void Reset()
+        {
+            if (this.SpectatorSystem == null)
+            {
+                this.SpectatorSystem = FindObjectOfType<SpectatorSystem>();
+            }
+            if (this.LevelSystem == null)
+            {
+                this.LevelSystem = FindObjectOfType<LevelSystem>();
+            }
+        }
 
         private void Update()
         {
@@ -31,7 +41,7 @@
                     continue;
                 }
 
-                spectator.PersuadeFactor += Time.deltaTime / this.PersuadeDuration;
+                spectator.PersuadeFactor += Time.deltaTime / this.LevelSystem.CurrentConfiguration.PersuadeDuration;
 
                 if (spectator.PersuadeFactor >= 1)
                 {

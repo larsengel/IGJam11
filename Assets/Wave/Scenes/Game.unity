@@ -173,8 +173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c070694d52b2fbb449185dbfd6b77c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelSystem: {fileID: 1902887266}
   SpectatorSystem: {fileID: 776921100}
-  UpsetSpectatorsFrequency: 1
 --- !u!1 &464330680
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eee23dd8cc805a4abd92d48fe50c49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PersuadeDuration: 0.5
+  LevelSystem: {fileID: 1902887266}
   SpectatorSystem: {fileID: 776921100}
 --- !u!1 &776921099
 GameObject:

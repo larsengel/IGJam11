@@ -4,15 +4,13 @@
 
     using UnityEngine;
 
+    using Wave.Levels;
+
     public class UpsetSystem : MonoBehaviour
     {
-        public SpectatorSystem SpectatorSystem;
+        public LevelSystem LevelSystem;
 
-        /// <summary>
-        ///   Number of spectators to make upset (per second).
-        /// </summary>
-        [Tooltip("Number of spectators to make upset (per second)")]
-        public float UpsetSpectatorsFrequency = 1;
+        public SpectatorSystem SpectatorSystem;
 
         private float nextUpsetDuration;
 
@@ -36,6 +34,18 @@
             happySpectator.MakeUpset();
         }
 
+        private void Reset()
+        {
+            if (this.SpectatorSystem == null)
+            {
+                this.SpectatorSystem = FindObjectOfType<SpectatorSystem>();
+            }
+            if (this.LevelSystem == null)
+            {
+                this.LevelSystem = FindObjectOfType<LevelSystem>();
+            }
+        }
+
         private void Update()
         {
             this.nextUpsetDuration -= Time.deltaTime;
@@ -44,7 +54,7 @@
                 this.MakeSpectatorUpset();
 
                 // Determine duration till next upset.
-                this.nextUpsetDuration = 1 / this.UpsetSpectatorsFrequency;
+                this.nextUpsetDuration = this.LevelSystem.CurrentConfiguration.UpsetSpectatorsInterval;
             }
         }
     }

@@ -28,6 +28,20 @@
         public float MaxLittleWaveDuration = 3.0f;
 
         /// <summary>
+        ///   Duration between two spectators becoming upset (per second).
+        /// </summary>
+        [Tooltip("Duration between two spectators becoming upset (per second)")]
+        [Range(0.1f, 10.0f)]
+        public float UpsetSpectatorsInterval = 1;
+
+        /// <summary>
+        ///   Duration till a spectator is persuaded (in s).
+        /// </summary>
+        [Tooltip("Duration till a spectator is persuaded (in s)")]
+        [Range(0.1f, 2.0f)]
+        public float PersuadeDuration = 1;
+
+        /// <summary>
         ///   Id of the next level to start after this one was won.
         /// </summary>
         [Tooltip("Id of the next level to start after this one was won")]
