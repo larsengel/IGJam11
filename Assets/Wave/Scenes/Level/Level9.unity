@@ -114,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 568527496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 5.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 608926806}
@@ -132,13 +132,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Audience: {fileID: 568527497}
-  CurrentLevelBehaviour: {fileID: 608926807}
   NoOfRows: 4
-  PeoplePerRow: 7
+  PeoplePerRow: 6
   CharacterWidth: 10
   CharacterHeight: 8
   SecondRowSpacing: 2
-  EmptySeatsFactor: 0.728
   MinimumScale: 0.8
   MaximumScale: 1.2
   MaxDepthScale: 0.5
@@ -191,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Configuration:
-    AllowSpectatorSigns: 1
+    ShowSignFactor: 0.3
     AudienceConfiguration: {fileID: 568527498}
     Duration: 60
     LevelId: 10
