@@ -33,8 +33,12 @@ public class AudienceAnimations : MonoBehaviour
         if (direction == "left")
         {
             animator.SetTrigger("wave_left");
+            var enabled = Random.Range(1, 3) == 1;
+            Search(transform, "schild_left").GetComponent<SpriteRenderer>().enabled = enabled;
         } else if (direction == "right")
         {
+            var enabled = Random.Range(1, 3) == 1;
+            Search(transform, "schild_right").GetComponent<SpriteRenderer>().enabled = enabled;
             animator.SetTrigger("wave_right");
         }
     }
@@ -42,5 +46,19 @@ public class AudienceAnimations : MonoBehaviour
     public void SetIdle()
     {
         animator.SetTrigger("idle");
+    }
+
+    public static Transform Search(Transform target, string name)
+    {
+        if (target.name == name) return target;
+
+        for (int i = 0; i < target.childCount; ++i)
+        {
+            var result = Search(target.GetChild(i), name);
+
+            if (result != null) return result;
+        }
+
+        return null;
     }
 }
