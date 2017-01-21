@@ -69,12 +69,14 @@ public class AudienceAnimations : MonoBehaviour
         this.ShieldLeft = new Shield
         {
             Root = Search(this.transform, "schild_left"),
-            TextTransform = Search(this.transform, "text_left")
+            TextTransform = Search(this.transform, "text_left"),
+            SchieldAni = Search(this.transform, "schild_ani_left")
         };
         this.ShieldRight = new Shield
         {
             Root = Search(this.transform, "schild_right"),
-            TextTransform = Search(this.transform, "text_right")
+            TextTransform = Search(this.transform, "text_right"),
+            SchieldAni = Search(this.transform, "schild_ani_right")
         };
     }
 
@@ -96,11 +98,17 @@ public class AudienceAnimations : MonoBehaviour
 
         public Transform TextTransform;
 
+        public Transform SchieldAni;
+
         public void Show(bool isVisible)
         {
             if (this.Root != null)
             {
                 this.Root.gameObject.SetActive(isVisible);
+                if (isVisible)
+                {
+                    this.SchieldAni.GetComponent<Animator>().SetTrigger("start");
+                }
             }
         }
     }
