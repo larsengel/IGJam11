@@ -39,7 +39,7 @@
                 pos_x += audienceConfiguration.SecondRowSpacing;
             }
 
-            Vector3 pos = new Vector3(pos_x, pos_y, y);
+            Vector3 pos = new Vector3(pos_x, pos_y, y * 2 + x * 0.01f);
             var spectatorGameObject = Instantiate(
                 this.AudiencePrefab,
                 pos,
