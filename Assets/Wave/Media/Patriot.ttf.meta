@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 62efd17f9233e4a6683d7c28d9d56e31
+timeCreated: 1485020820
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Patriot
+  fontNames:
+  - Patriot
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

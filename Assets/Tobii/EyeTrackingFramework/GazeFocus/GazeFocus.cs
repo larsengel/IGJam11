@@ -23,7 +23,7 @@ namespace Tobii.EyeTracking
         private IDataProvider<GazePoint> _gazePointDataProvider; 
         private FocusedObject _focusedObject = FocusedObject.Invalid;
         private GazePoint _lastHandledGazePoint = GazePoint.Invalid;
-        private bool _useMouseEmulation = false; // TODO: use logic that can be controlled from UnityEditor?
+        private bool _useMouseEmulation = true; // TODO: use logic that can be controlled from UnityEditor?
         private Camera _camera;
 
         //---------------------------------------------------------------------

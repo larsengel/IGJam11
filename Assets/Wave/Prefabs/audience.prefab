@@ -37,8 +37,8 @@ GameObject:
   - component: {fileID: 4354376152004922}
   - component: {fileID: 212465098576326496}
   m_Layer: 0
-  m_Name: arm (1)
-  m_TagString: Untagged
+  m_Name: arm
+  m_TagString: clothes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 212634310614339618}
   m_Layer: 0
   m_Name: arm
-  m_TagString: Untagged
+  m_TagString: clothes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 212265544552451718}
   m_Layer: 0
   m_Name: body
-  m_TagString: Untagged
+  m_TagString: clothes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,8 +198,8 @@ GameObject:
   - component: {fileID: 4492414246677648}
   - component: {fileID: 212237856122273074}
   m_Layer: 0
-  m_Name: arm (2)
-  m_TagString: Untagged
+  m_Name: arm
+  m_TagString: clothes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,6 +457,7 @@ GameObject:
   - component: {fileID: 95295201033409668}
   - component: {fileID: 114560488767716254}
   - component: {fileID: 114078407577001938}
+  - component: {fileID: 114887957768433202}
   m_Layer: 0
   m_Name: audience
   m_TagString: Untagged
@@ -505,8 +506,8 @@ GameObject:
   - component: {fileID: 4603721038606874}
   - component: {fileID: 212766554430380172}
   m_Layer: 0
-  m_Name: arm (3)
-  m_TagString: Untagged
+  m_Name: arm
+  m_TagString: clothes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1966,6 +1967,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd0af4a13c7e1d40ae69eeef846b290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114887957768433202
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1719517899885666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f4529b98c5b7d46b5d0a42f09366cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212007634949591688
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -2119,7 +2131,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 34e5db0c64442c0488971b5401214c3b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2189,7 +2201,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 34e5db0c64442c0488971b5401214c3b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2294,7 +2306,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 34e5db0c64442c0488971b5401214c3b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2364,7 +2376,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 34e5db0c64442c0488971b5401214c3b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2434,7 +2446,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 34e5db0c64442c0488971b5401214c3b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

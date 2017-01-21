@@ -12,9 +12,34 @@
         public UnityEvent GazeFocusLost;
 
         public GazeAware Target;
-
+        
         private bool hasGazeFocus;
 
+        public bool HasGazeFocus
+        {
+            get
+            {
+                return this.hasGazeFocus;
+            }
+            set
+            {
+                if (value == this.hasGazeFocus)
+                {
+                    return;
+                }
+                this.hasGazeFocus = value;
+
+                if (value)
+                {
+                    this.GazeFocusGained.Invoke();
+                }
+                else
+                {
+                    this.GazeFocusLost.Invoke();
+                }
+            }
+        }
+        
         private void Reset()
         {
             if (this.Target == null)
@@ -25,24 +50,9 @@
 
         private void Update()
         {
-            if (this.Target == null)
+            if (this.Target != null)
             {
-                return;
-            }
-
-            var hasGazeFocusNow = this.Target.HasGazeFocus;
-            if (this.hasGazeFocus != hasGazeFocusNow)
-            {
-                if (hasGazeFocusNow)
-                {
-                    this.GazeFocusGained.Invoke();
-                }
-                else
-                {
-                    this.GazeFocusLost.Invoke();
-                }
-
-                this.hasGazeFocus = hasGazeFocusNow;
+                this.HasGazeFocus = this.Target.HasGazeFocus;
             }
         }
     }

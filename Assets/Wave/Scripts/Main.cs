@@ -15,6 +15,13 @@ namespace Wave
         START = 1,
         LEVEL1,
         LEVEL2,
+        LEVEL3,
+        LEVEL4,
+        LEVEL5,
+        LEVEL6,
+        LEVEL7,
+        LEVEL8,
+        LEVEL9,
         END,
         CREDITS,
 
@@ -52,8 +59,6 @@ namespace Wave
         // append the list of scenes you want to add to a gamestate at the end of this list
         // and add the scenes to the build_settings
         List<string> start_assets = new List<string> () { "Start" };
-        List<string> level1_assets = new List<string> () { "Game", "Level1", "InGameUI" };
-        List<string> level2_assets = new List<string> () { "Game", "Level2", "InGameUI" };
         List<string> end_assets = new List<string> () { "End" };
         List<string> credits_assets = new List<string>() { "Credits" };
 
@@ -62,8 +67,15 @@ namespace Wave
             AssetProvider = GetComponent<AssetProvider> ();
 
             states.Add (GameStates.START, new GameState (GameStates.START, "Start", start_assets));
-            states.Add (GameStates.LEVEL1, new GameState (GameStates.LEVEL1, "Level1", level1_assets));
-            states.Add (GameStates.LEVEL2, new GameState (GameStates.LEVEL2, "Level2", level2_assets));
+            states.Add (GameStates.LEVEL1, new GameState (GameStates.LEVEL1, "Level1", new List<string>() { "Game", "Level1", "InGameUI" }));
+            states.Add (GameStates.LEVEL2, new GameState (GameStates.LEVEL2, "Level2", new List<string>() { "Game", "Level2", "InGameUI" }));
+            states.Add(GameStates.LEVEL3, new GameState(GameStates.LEVEL3, "Level3", new List<string>() { "Game", "Level3", "InGameUI" }));
+            states.Add(GameStates.LEVEL4, new GameState(GameStates.LEVEL4, "Level4", new List<string>() { "Game", "Level4", "InGameUI" }));
+            states.Add(GameStates.LEVEL5, new GameState(GameStates.LEVEL5, "Level5", new List<string>() { "Game", "Level5", "InGameUI" }));
+            states.Add(GameStates.LEVEL6, new GameState(GameStates.LEVEL6, "Level6", new List<string>() { "Game", "Level6", "InGameUI" }));
+            states.Add(GameStates.LEVEL7, new GameState(GameStates.LEVEL7, "Level7", new List<string>() { "Game", "Level7", "InGameUI" }));
+            states.Add(GameStates.LEVEL8, new GameState(GameStates.LEVEL8, "Level8", new List<string>() { "Game", "Level8", "InGameUI" }));
+            states.Add(GameStates.LEVEL9, new GameState(GameStates.LEVEL9, "Level9", new List<string>() { "Game", "Level9", "InGameUI" }));
             states.Add (GameStates.END, new GameState (GameStates.END, "End", end_assets));
             states.Add(GameStates.CREDITS, new GameState(GameStates.CREDITS, "Credits", credits_assets));
             this.states.Add(

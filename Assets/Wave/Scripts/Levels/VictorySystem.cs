@@ -8,8 +8,6 @@
     {
         public LevelSystem LevelSystem;
 
-        public GameStates LevelWonState = GameStates.LEVEL_WON;
-
         private float levelOverTime = float.MaxValue;
 
         private Main main;
@@ -24,11 +22,12 @@
 
         public event Action LevelWon;
 
+        [ContextMenu("Win Level")]
         protected virtual void OnLevelWon()
         {
             if (this.main != null)
             {
-                this.main.SwitchState(this.LevelWonState);
+                this.main.SwitchState(GameStates.LEVEL_WON);
             }
 
             this.levelOverTime = float.MaxValue;

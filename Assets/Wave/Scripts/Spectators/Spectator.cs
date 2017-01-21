@@ -9,11 +9,11 @@
 
         public UnityEvent BecameUpset;
 
-        public bool IsPursuading { get; set; }
-
         public float PersuadeFactor;
 
         private bool isUpset;
+
+        public bool IsPursuading { get; set; }
 
         public bool IsUpset
         {
