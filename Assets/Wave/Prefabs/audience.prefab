@@ -539,6 +539,7 @@ GameObject:
   - component: {fileID: 4818329832254976}
   - component: {fileID: 95685276907485260}
   - component: {fileID: 114247459466260032}
+  - component: {fileID: 114171579305038778}
   m_Layer: 0
   m_Name: schild_ani_right
   m_TagString: Untagged
@@ -587,6 +588,7 @@ GameObject:
   - component: {fileID: 4933306688349482}
   - component: {fileID: 95481136926272612}
   - component: {fileID: 114611659325864078}
+  - component: {fileID: 114210955411899926}
   m_Layer: 0
   m_Name: schild_ani_left
   m_TagString: Untagged
@@ -2124,6 +2126,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4dd7571e7eb9ef419f10a03bb391483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114171579305038778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1796148924179864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebe5fe32f2a8ff408eb18b94b0ef2e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114173635475817844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2146,6 +2159,17 @@ MonoBehaviour:
   - Trumpence
   - You are gr8!
   - Grab her!
+--- !u!114 &114210955411899926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1815632994266958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebe5fe32f2a8ff408eb18b94b0ef2e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114221726370668928
 MonoBehaviour:
   m_ObjectHideFlags: 1
