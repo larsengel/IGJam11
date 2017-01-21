@@ -1498,9 +1498,9 @@ TextMesh:
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 181
-  m_FontStyle: 0
+  m_FontStyle: 2
   m_RichText: 1
-  m_Font: {fileID: 0}
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -1519,7 +1519,7 @@ TextMesh:
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 181
-  m_FontStyle: 0
+  m_FontStyle: 2
   m_RichText: 1
   m_Font: {fileID: 0}
   m_Color:
