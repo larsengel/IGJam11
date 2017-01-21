@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking.NetworkSystem;
+using Wave.Levels;
 
 
 public class CharacterPlacer : MonoBehaviour
@@ -11,6 +12,7 @@ public class CharacterPlacer : MonoBehaviour
 	
     public GameObject AudiencePrefab;
     public Transform Audience;
+    public LevelBehaviour CurrentLevelBehaviour;
 
     [Space (20.0f)]
     public int NoOfRows;
@@ -97,6 +99,8 @@ public class CharacterPlacer : MonoBehaviour
             
         Vector3 pos = new Vector3 (pos_x, pos_y, y);
         var new_char = Instantiate (AudiencePrefab, pos, Quaternion.identity, Audience);
+
+        new_char.GetComponent<Particler> ().Duration = CurrentLevelBehaviour.Configuration.PersuadeDuration;
 
         // guys in back are smaller than front ...
         float row_scale_factor = InitialScale - (row_id * MaxDepthScale / NoOfRows);

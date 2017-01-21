@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 224592559125037594}
   - component: {fileID: 23221949105922244}
   - component: {fileID: 102046622038893262}
-  - component: {fileID: 114291609202180892}
+  - component: {fileID: 114301072421572688}
   m_Layer: 0
   m_Name: text_left
   m_TagString: Untagged
@@ -1594,7 +1594,40 @@ MonoBehaviour:
     type: 2}
   UpsetParticlePrefab: {fileID: 1669489901144448, guid: abcf0c698b4ec4daca8806ded81f7dfe,
     type: 2}
---- !u!114 &114291609202180892
+  HappyHaloPrefab: {fileID: 1320549793322442, guid: c6f5bdd8c4f9149efac7b1c7b895c661,
+    type: 2}
+  HappyHalo: {fileID: 0}
+--- !u!114 &114293445719755654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad462b97da086bf4f9ce96580cdd6b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Eyes:
+  - {fileID: 21300000, guid: e1e920f38ce0a2d4c8402d8fff47970c, type: 3}
+  - {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
+  - {fileID: 21300000, guid: bad5e9c65696d444cbf918b396ada42d, type: 3}
+  - {fileID: 21300000, guid: 36cc5bbe185cdac4291babdb37da6153, type: 3}
+  Noses:
+  - {fileID: 21300000, guid: fcbc3bf10970719499d986c8acf800a0, type: 3}
+  - {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
+  - {fileID: 21300000, guid: aa1ca2a28213c9c4a8e16b3cb67382bf, type: 3}
+  Mouths:
+  - {fileID: 21300000, guid: 015b003c288c93749b6a26f56d645132, type: 3}
+  - {fileID: 21300000, guid: 9bd91fe5537b7f645b41878d86eb18c2, type: 3}
+  - {fileID: 21300000, guid: f123a54950f11ff429dd6d222a09d779, type: 3}
+  - {fileID: 21300000, guid: 61a2a6a225042774ea61669528d7ec8c, type: 3}
+  Hairs:
+  - {fileID: 21300000, guid: f456df8c62440624f99cc28273bf631d, type: 3}
+  - {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
+  - {fileID: 21300000, guid: 4417b7cc447ee2846a149260e7dee199, type: 3}
+  - {fileID: 21300000, guid: b25d862baecfd6c428db2ea6d1b9dbf7, type: 3}
+--- !u!114 &114301072421572688
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

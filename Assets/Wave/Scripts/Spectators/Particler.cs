@@ -7,6 +7,30 @@ public class Particler : MonoBehaviour
 
     public GameObject HappyParticlePrefab;
     public GameObject UpsetParticlePrefab;
+    public GameObject HappyHaloPrefab;
+
+    public float Duration { get; set; }
+
+    public HappyHalo HappyHalo;
+
+    public HappyHalo CreateHalo ()
+    {
+        if (HappyHalo != null) {
+            return HappyHalo;
+        }
+
+        HappyHalo = Instantiate (HappyHaloPrefab, Vector3.zero, Quaternion.identity, transform).GetComponent<HappyHalo> ();
+        HappyHalo.transform.localPosition = Vector3.zero;
+        HappyHalo.SpeedFactor = Duration;
+
+        return HappyHalo;
+    }
+
+
+    public void OnFocusEffekt ()
+    {
+       
+    }
 
     public void ShowHappy ()
     {
