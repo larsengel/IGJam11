@@ -135,16 +135,15 @@ MonoBehaviour:
     type: 2}
   Audience: {fileID: 568527497}
   NoOfRows: 7
-  PeoplePerRow: 7
+  PeoplePerRow: 8
   CharacterWidth: 6.91
   CharacterHeight: 4
   SecondRowSpacing: 2
+  EmptySeatsFactor: 0.728
   MinimumScale: 0.8
   MaximumScale: 1.2
-  CharacterSpacing: 0
-  FillPercentage: 0
-  CharacterSpacingRandomization: 0
-  SecondRowSpacingRandomization: 0
+  MaxDepthScale: 0.5
+  InitialScale: 1.22
 --- !u!1 &608926805
 GameObject:
   m_ObjectHideFlags: 0
