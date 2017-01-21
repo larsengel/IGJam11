@@ -11,6 +11,6 @@ public class NewsPaper : MonoBehaviour
 
     public void Init(bool isWinner)
     {
-
+        //TODO
     }
 }
