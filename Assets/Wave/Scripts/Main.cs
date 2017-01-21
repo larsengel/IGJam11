@@ -12,7 +12,11 @@ namespace Wave
         LEVEL1,
         LEVEL2,
         END,
-        CREDITS
+        CREDITS,
+
+        LEVEL_WON,
+        LEVEL_DEFEAT,
+        GAME_FINISHED
     }
 
     public class GameState
@@ -43,10 +47,10 @@ namespace Wave
         // append the list of scenes you want to add to a gamestate at the end of this list
         // and add the scenes to the build_settings
         List<string> start_assets = new List<string> () { "Start" };
-        List<string> level1_assets = new List<string> () { "Level1", "InGameUI" };
-        List<string> level2_assets = new List<string> () { "Level2", "InGameUI" };
+        List<string> level1_assets = new List<string> () { "Game", "Level1", "InGameUI" };
+        List<string> level2_assets = new List<string> () { "Game", "Level2", "InGameUI" };
         List<string> end_assets = new List<string> () { "End" };
-        List<string> credits_assets = new List<string> () { "Credits" };
+        List<string> credits_assets = new List<string>() { "Credits" };
 
         void Awake ()
         {
@@ -56,7 +60,16 @@ namespace Wave
             states.Add (GameStates.LEVEL1, new GameState (GameStates.LEVEL1, "Level1", level1_assets));
             states.Add (GameStates.LEVEL2, new GameState (GameStates.LEVEL2, "Level2", level2_assets));
             states.Add (GameStates.END, new GameState (GameStates.END, "End", end_assets));
-            states.Add (GameStates.CREDITS, new GameState (GameStates.CREDITS, "Credits", credits_assets));
+            states.Add(GameStates.CREDITS, new GameState(GameStates.CREDITS, "Credits", credits_assets));
+            this.states.Add(
+                GameStates.LEVEL_WON,
+                new GameState(GameStates.LEVEL_WON, "LevelWon", new List<string>() { "LevelWon" }));
+            this.states.Add(
+                GameStates.LEVEL_DEFEAT,
+                new GameState(GameStates.LEVEL_DEFEAT, "LevelDefeat", new List<string>() { "LevelDefeat" }));
+            this.states.Add(
+                GameStates.GAME_FINISHED,
+                new GameState(GameStates.GAME_FINISHED, "GameFinished", new List<string>() { "GameFinished" }));
 
             if (SceneManager.sceneCount <= 1)
             {
@@ -68,7 +81,8 @@ namespace Wave
          * unloads the current state assets, loads the new state assets
          * and make it the current state
          */
-        void SwitchState (GameStates new_state)
+
+        public void SwitchState (GameStates new_state)
         {
             if (current_state != null) {
 
