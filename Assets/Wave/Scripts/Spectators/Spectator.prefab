@@ -1607,6 +1607,7 @@ MonoBehaviour:
   - Trumpence
   - You are gr8!
   - Grab her!
+  Spectator: {fileID: 114040314980610966}
 --- !u!114 &114040314980610966
 MonoBehaviour:
   m_ObjectHideFlags: 1

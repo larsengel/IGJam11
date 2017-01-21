@@ -1,18 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Networking.NetworkSystem;
-using Wave.Levels;
-
+﻿using UnityEngine;
 
 public class CharacterPlacer : MonoBehaviour
 {
-
-	
-    public GameObject AudiencePrefab;
     public Transform Audience;
-    public LevelBehaviour CurrentLevelBehaviour;
 
     [Space (20.0f)]
     public int NoOfRows;
@@ -56,58 +46,12 @@ public class CharacterPlacer : MonoBehaviour
     // the Rows and seats are iterated with IDs starting from -half_value to +half_value, so
     // that 0,0 is around the 0,0 point of the gameobject.
     // Also this gives us a row z-index for free
-    int seatStartId { get { return (PeoplePerRow / 2); } }
+    public int seatStartId { get { return (PeoplePerRow / 2); } }
 
-    int seatMaxId { get { return (PeoplePerRow % 2 == 0) ? seatStartId : seatStartId + 1; } }
+    public int seatMaxId { get { return (PeoplePerRow % 2 == 0) ? seatStartId : seatStartId + 1; } }
 
-    int rowStartId { get { return (NoOfRows / 2); } }
+    public int rowStartId { get { return (NoOfRows / 2); } }
 
-    int rowMaxId { get { return (NoOfRows % 2 == 0) ? rowStartId : rowStartId + 1; } }
+    public int rowMaxId { get { return (NoOfRows % 2 == 0) ? rowStartId : rowStartId + 1; } }
 
-
- 
-    void Start ()
-    {
-        RenderAudience ();
-    }
-
-
-    public void RenderAudience ()
-    {
-        for (int y = -rowStartId; y < rowMaxId; y++) {   
-            for (int x = -seatStartId; x < seatMaxId; x++) {
-                // Seat may stay empty
-                if (Random.Range (0.0f, 1.0f) < EmptySeatsFactor) {
-                    RenderActor (x, y);
-                }
-            }
-        }
-    }
-
-    void RenderActor (int x, int y)
-    {
-
-        float row_id = y + rowStartId; // Have a row id counting up from 0
-
-        float pos_x = x * CharacterWidth;
-        float pos_y = y * CharacterHeight;
-
-        // offset every second row
-        if (y % 2 == 0) {
-            pos_x += SecondRowSpacing;
-        }
-            
-        Vector3 pos = new Vector3 (pos_x, pos_y, y);
-        var new_char = Instantiate (AudiencePrefab, pos, Quaternion.identity, Audience);
-
-        new_char.GetComponent<Particler> ().Duration = CurrentLevelBehaviour.Configuration.PersuadeDuration;
-
-        // guys in back are smaller than front ...
-        float row_scale_factor = InitialScale - (row_id * MaxDepthScale / NoOfRows);
-        // ... and have a indiviaual scale factor
-        float scale = row_scale_factor * Random.Range (MinimumScale, MaximumScale);
-
-        new_char.transform.localScale = new Vector3 (scale, scale, scale);
-
-    }
 }

@@ -357,8 +357,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05285ac15b0f4ec98dd9891ee406a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudiencePrefab: {fileID: 1680480023894746, guid: 96e35c818b66b9a4ebcb4046e661f06a,
-    type: 2}
   Audience: {fileID: 568527497}
   CurrentLevelBehaviour: {fileID: 608926807}
   NoOfRows: 3
@@ -419,12 +417,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Configuration:
+    AllowSpectatorSigns: 1
+    AudienceConfiguration: {fileID: 568527498}
     Duration: 45
     LevelId: 3
     MaxLittleWaveDuration: 10
-    UpsetSpectatorsInterval: 3
-    PersuadeDuration: 0.5
     NextLevelId: 4
+    PersuadeDuration: 0.5
+    UpsetSpectatorsInterval: 3
     WaveThreshold: 0.25
 --- !u!82 &608926808
 AudioSource:

@@ -8,6 +8,18 @@
     public class LevelConfiguration
     {
         /// <summary>
+        ///   Chance that a spectator shows a sign.
+        /// </summary>
+        [Tooltip("Chance that a spectator shows a sign")]
+        [Range(0, 1)]
+        public float ShowSignFactor = 0.3f;
+
+        /// <summary>
+        ///   Configuration for the audience setup.
+        /// </summary>
+        public CharacterPlacer AudienceConfiguration;
+
+        /// <summary>
         ///   Duration of level (in s).
         /// </summary>
         [Tooltip("Duration of level (in s)")]
@@ -28,11 +40,10 @@
         public float MaxLittleWaveDuration = 3.0f;
 
         /// <summary>
-        ///   Duration between two spectators becoming upset (per second).
+        ///   Id of the next level to start after this one was won.
         /// </summary>
-        [Tooltip("Duration between two spectators becoming upset (per second)")]
-        [Range(0.1f, 10.0f)]
-        public float UpsetSpectatorsInterval = 1;
+        [Tooltip("Id of the next level to start after this one was won")]
+        public GameStates NextLevelId;
 
         /// <summary>
         ///   Duration till a spectator is persuaded (in s).
@@ -42,10 +53,11 @@
         public float PersuadeDuration = 1;
 
         /// <summary>
-        ///   Id of the next level to start after this one was won.
+        ///   Duration between two spectators becoming upset (per second).
         /// </summary>
-        [Tooltip("Id of the next level to start after this one was won")]
-        public GameStates NextLevelId;
+        [Tooltip("Duration between two spectators becoming upset (per second)")]
+        [Range(0.1f, 10.0f)]
+        public float UpsetSpectatorsInterval = 1;
 
         /// <summary>
         ///   Threshold for waving ratio.

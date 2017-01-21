@@ -2,6 +2,8 @@
 
 using UnityEngine;
 
+using Wave.Spectators;
+
 using Random = UnityEngine.Random;
 
 public class AudienceAnimations : MonoBehaviour
@@ -11,6 +13,8 @@ public class AudienceAnimations : MonoBehaviour
     public Shield ShieldLeft;
 
     public Shield ShieldRight;
+
+    public Spectator Spectator;
 
     public static Transform Search(Transform target, string name)
     {
@@ -46,15 +50,15 @@ public class AudienceAnimations : MonoBehaviour
 
     public void SetWave(string direction)
     {
+        var showSignFactor = this.Spectator != null ? this.Spectator.ShowSignFactor : 0.3f;
+        var showShield = Random.Range(0.0f, 1.0f) < showSignFactor;
         if (direction == "left")
         {
-            var showShield = Random.Range(1, 10) <= 3;
             this.ShieldLeft.Show(showShield);
             this.Animator.SetTrigger("wave_left");
         }
         else if (direction == "right")
         {
-            var showShield = Random.Range(1, 10) <= 3;
             this.ShieldRight.Show(showShield);
             this.Animator.SetTrigger("wave_right");
         }

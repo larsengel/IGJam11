@@ -13,6 +13,8 @@
 
         private bool isUpset;
 
+        public float ShowSignFactor { get; set; }
+
         public bool IsPursuading { get; set; }
 
         public bool IsUpset
