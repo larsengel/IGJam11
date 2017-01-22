@@ -434,6 +434,7 @@ GameObject:
   - component: {fileID: 114447093289534814}
   - component: {fileID: 114111079840253414}
   - component: {fileID: 114427305483543186}
+  - component: {fileID: 114591133709077916}
   m_Layer: 0
   m_Name: audience
   m_TagString: Untagged
@@ -2017,6 +2018,17 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   Target: {fileID: 114124144585600710}
+--- !u!114 &114591133709077916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647361240187832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4b37bea3c2db248bed7a3b801ef0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114624566464979334
 MonoBehaviour:
   m_ObjectHideFlags: 1

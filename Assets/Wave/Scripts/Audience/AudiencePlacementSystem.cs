@@ -70,7 +70,7 @@
 
 		private void RenderAudience (CharacterPlacer audienceConfiguration)
 		{
-			for (int y = -audienceConfiguration.rowStartId; y < audienceConfiguration.rowMaxId; y++) {
+			for (int y = audienceConfiguration.rowMaxId; y > -audienceConfiguration.rowStartId; y--) {
 				for (int x = -audienceConfiguration.seatStartId; x < audienceConfiguration.seatMaxId; x++) {
 					// Seat may stay empty
 					if (Random.Range (0.0f, 1.0f) < this.EmptySeatsFactor) {
