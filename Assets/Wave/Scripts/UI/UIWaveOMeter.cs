@@ -13,7 +13,7 @@ public class UIWaveOMeter : MonoBehaviour
 
     private void OnDrawGizmos ()
     {
-        Update ();
+        //Update ();
     }
 
     private void Start ()
@@ -24,7 +24,7 @@ public class UIWaveOMeter : MonoBehaviour
     // 0 ist 90 und 1 is -90
     private void Update ()
     {
-        //this.Value = this.defeatSystem != null ? this.defeatSystem.WaveRatio : 0.5f;
+        this.Value = this.defeatSystem != null ? this.defeatSystem.WaveRatio : 0.5f;
 
         float euler_angle = 90.0f - (180.0f * this.Value);
         this.Pointer.rotation = Quaternion.Euler (new Vector3 (0, 0, euler_angle));
