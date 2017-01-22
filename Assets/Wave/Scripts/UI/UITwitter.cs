@@ -7,53 +7,56 @@ using System.IO;
 public class UITwitter : MonoBehaviour
 {
 
-    public RectTransform TweetPrefab;
-    public Transform TweetContainer;
+	public RectTransform TweetPrefab;
+	public Transform TweetContainer;
 
-    public float ScrollSpeed;
-
-
-    string fileName = "Wave/Media/TrumpQuotes.txt";
-    string[] lines;
-
-    // Use this for initialization
-    void Start ()
-    {
-        var sr = new StreamReader (Application.dataPath + "/" + fileName);
-        var fileContents = sr.ReadToEnd ();
-        sr.Close ();
-
-        lines = fileContents.Split ("\n" [0]);
+	public float ScrollSpeed;
 
 
-        for (int i = 0; i < 200; i++) {
-            CreateTweet (randomLine ());
-        }
+	string[] lines;
 
-    }
+	string GetQuotes ()
+	{
+		TextAsset txt = Resources.Load ("TrumpQuotes") as TextAsset;
+		return txt.text;
+	}
 
-    string randomLine ()
-    {
-        return lines [Random.Range (0, lines.Length - 1)];
-    }
+	// Use this for initialization
+	void Start ()
+	{
+		var fileContents = GetQuotes ();
 
-    void CreateTweet (string line)
-    {
+		lines = fileContents.Split ("\n" [0]);
 
-        var tweet = Instantiate (TweetPrefab, Vector3.zero, Quaternion.identity, TweetContainer);
+
+		for (int i = 0; i < 200; i++) {
+			CreateTweet (randomLine ());
+		}
+
+	}
+
+	string randomLine ()
+	{
+		return lines [Random.Range (0, lines.Length - 1)];
+	}
+
+	void CreateTweet (string line)
+	{
+
+		var tweet = Instantiate (TweetPrefab, Vector3.zero, Quaternion.identity, TweetContainer);
   
-        tweet.FindChild ("TweetText").GetComponent<Text> ().text = line;
+		tweet.FindChild ("TweetText").GetComponent<Text> ().text = line;
 
-        char letter = (char)Random.Range (65, 90);
-        tweet.FindChild ("Mood").GetComponent<Text> ().text = letter.ToString ();
-    }
+		char letter = (char)Random.Range (65, 90);
+		tweet.FindChild ("Mood").GetComponent<Text> ().text = letter.ToString ();
+	}
 
-    // Update is called once per frame
-    void Update ()
-    {
-        foreach (Transform child in TweetContainer) {
-            var pos = child.position;
-            child.position = new Vector3 (pos.x - ScrollSpeed * Time.deltaTime, pos.y, pos.z); 
-        }
-    }
+	// Update is called once per frame
+	void Update ()
+	{
+		foreach (Transform child in TweetContainer) {
+			var pos = child.position;
+			child.position = new Vector3 (pos.x - ScrollSpeed * Time.deltaTime, pos.y, pos.z); 
+		}
+	}
 }
