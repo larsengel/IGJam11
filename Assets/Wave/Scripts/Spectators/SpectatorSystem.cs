@@ -13,32 +13,40 @@
 
         public List<Spectator> Spectators;
 
-        [ContextMenu("Find Spectators")]
-        private void FindSpectators()
+        [ContextMenu ("Find Spectators")]
+        private void FindSpectators ()
         {
-            this.Spectators = FindObjectsOfType<Spectator>().ToList();
+            this.Spectators = FindObjectsOfType<Spectator> ().ToList ();
         }
 
-        private void OnDisable()
+        private void OnDisable ()
         {
             this.LevelSystem.LevelStarted -= this.OnLevelStarted;
             this.LevelSystem.LevelFinished -= this.OnLevelFinished;
         }
 
-        private void OnEnable()
+        private void OnEnable ()
         {
             this.LevelSystem.LevelStarted += this.OnLevelStarted;
             this.LevelSystem.LevelFinished += this.OnLevelFinished;
         }
 
-        private void OnLevelFinished()
+        private void OnLevelFinished ()
         {
             this.Spectators = null;
         }
 
-        private void OnLevelStarted()
+        private void OnLevelStarted ()
         {
-            this.FindSpectators();
+            this.FindSpectators ();
+            this.MakeSpectatorsWave ();
+        }
+
+        private void MakeSpectatorsWave ()
+        {
+            foreach (var spectator in this.Spectators) {
+                spectator.MakeHappy ();
+            }
         }
     }
 }
