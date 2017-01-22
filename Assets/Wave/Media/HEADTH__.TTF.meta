@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2dc3c129f07434756860ac4b3d11ba91
+timeCreated: 1485082608
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Headline Two
+  fontNames:
+  - Headline Two
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

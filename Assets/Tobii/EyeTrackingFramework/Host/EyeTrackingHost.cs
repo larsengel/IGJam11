@@ -432,6 +432,9 @@ namespace Tobii.EyeTracking
             {
                 Debug.LogError("Tobii Engine context initialization failed: " + ex.Message);
             }
+
+            // Use mouse emulation if eye tracking not available.
+            this.GazeFocus.UseMouseEmulation = !this.GazeTracking.IsTrackingEyeGaze;
         }
 
         /// <summary>

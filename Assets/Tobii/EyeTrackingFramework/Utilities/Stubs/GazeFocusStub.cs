@@ -21,6 +21,7 @@ namespace Tobii.EyeTracking
         public Camera Camera { get; set; }
         public FocusedObject FocusedObject { get { return FocusedObject.Invalid; } }
         public IEnumerable<GameObject> ObjectsInGaze { get { return new List<GameObject>(); } }
+        public bool UseMouseEmulation { get; set; }
 
         //---------------------------------------------------------------------
         // Implementing IRegisterGazeFocusable

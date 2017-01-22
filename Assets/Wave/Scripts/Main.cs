@@ -53,6 +53,7 @@ namespace Wave
 		public static Main Instance { get; private set; }
 
 		public int LevelCount = 9;
+		public Camera mainCamera;
 
 		GameState current_state;
 
