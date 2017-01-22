@@ -434,7 +434,7 @@ namespace Tobii.EyeTracking
             }
 
             // Use mouse emulation if eye tracking not available.
-            this.GazeFocus.UseMouseEmulation = !this.GazeTracking.IsTrackingEyeGaze;
+            this.GazeFocus.UseMouseEmulation = _context.ConnectionState != ConnectionState.Connected;
         }
 
         /// <summary>
@@ -513,6 +513,9 @@ namespace Tobii.EyeTracking
                 _userProfileNamesStateAccessor.OnDisconnected();
                 _gazeTracking.OnDisconnected();
             }
+
+            // Use mouse emulation if eye tracking not available.
+            this.GazeFocus.UseMouseEmulation = _context.ConnectionState != ConnectionState.Connected;
         }
 
         private void HandleEvent(InteractionEvent event_)
