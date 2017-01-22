@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Spriter2UnityDX;
 using UnityEngine;
 
 public class OrderInLayer : MonoBehaviour {
@@ -14,6 +15,10 @@ public class OrderInLayer : MonoBehaviour {
 	    foreach (var renderer in GetComponentsInChildren<Renderer>())
 	    {
 	        renderer.sortingOrder += Offset;
+	    }
+	    foreach (var renderer in GetComponentsInChildren<EntityRenderer>())
+	    {
+	        renderer.SortingOrder += Offset;
 	    }
 	}
 }
