@@ -291,6 +291,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Intro: {fileID: 8300000, guid: fd9512751eb2246d7a3fb8dd4023f69a, type: 3}
   Loop: {fileID: 8300000, guid: 30bf009fe85c54ce686a4791752547dc, type: 3}
+--- !u!1001 &871177513
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1328001651}
+    m_Modifications:
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &871177514 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e,
+    type: 2}
+  m_PrefabInternal: {fileID: 871177513}
 --- !u!1001 &1075662096
 Prefab:
   m_ObjectHideFlags: 0
@@ -431,6 +478,7 @@ Transform:
   - {fileID: 1651042598}
   - {fileID: 1400284124}
   - {fileID: 1930319149}
+  - {fileID: 871177514}
   m_Father: {fileID: 608926806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

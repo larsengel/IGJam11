@@ -461,6 +461,53 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1263556360
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1874676748}
+    m_Modifications:
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ee18a35fe677d49258429c5478a9a04e, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1263556361 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4350279491466688, guid: ee18a35fe677d49258429c5478a9a04e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1263556360}
 --- !u!1001 &1485800190
 Prefab:
   m_ObjectHideFlags: 0
@@ -780,6 +827,7 @@ Transform:
   - {fileID: 511353510}
   - {fileID: 1597032245}
   - {fileID: 1485800191}
+  - {fileID: 1263556361}
   m_Father: {fileID: 608926806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
