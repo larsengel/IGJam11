@@ -12,12 +12,16 @@ public class UITwitter : MonoBehaviour
 
 	public float ScrollSpeed;
 
+	public string SourceFile;
+
+	public bool RandomOrder;
 
 	string[] lines;
+	int CurrentLine = 0;
 
 	string GetQuotes ()
 	{
-		TextAsset txt = Resources.Load ("TrumpQuotes") as TextAsset;
+		TextAsset txt = Resources.Load (SourceFile) as TextAsset;
 		return txt.text;
 	}
 
@@ -26,7 +30,7 @@ public class UITwitter : MonoBehaviour
 	{
 		var fileContents = GetQuotes ();
 
-		lines = fileContents.Split ("\n" [0]);
+		lines = fileContents.Trim ().Split ("\n" [0]);
 
 
 		for (int i = 0; i < 200; i++) {
@@ -37,7 +41,16 @@ public class UITwitter : MonoBehaviour
 
 	string randomLine ()
 	{
-		return lines [Random.Range (0, lines.Length - 1)];
+		if (RandomOrder) {
+			return lines [Random.Range (0, lines.Length - 1)];
+
+		} else {
+			if (CurrentLine > lines.Length - 1) {
+				CurrentLine = 0;
+			}
+			return lines [CurrentLine++];
+		}
+
 	}
 
 	void CreateTweet (string line)

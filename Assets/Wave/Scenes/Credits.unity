@@ -260,7 +260,7 @@ Prefab:
     - target: {fileID: 224648327560813746, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224648327560813746, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
@@ -319,7 +319,7 @@ Prefab:
     - target: {fileID: 224119096927652098, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 99.27611
+      value: 101
       objectReference: {fileID: 0}
     - target: {fileID: 114787960518514096, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
@@ -349,6 +349,92 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224648327560813746, guid: f2cf431f0500345479f4261a79aa12e1,
     type: 2}
   m_PrefabInternal: {fileID: 110904576}
+--- !u!1 &133710589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 133710590}
+  - component: {fileID: 133710593}
+  - component: {fileID: 133710592}
+  - component: {fileID: 133710591}
+  m_Layer: 5
+  m_Name: TweetFeed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &133710590
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133710589}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 563792021}
+  m_Father: {fileID: 644308282}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 25}
+  m_SizeDelta: {x: 0, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &133710591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133710589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2a8d292fc9b4541b87a4ebb397e8dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TweetPrefab: {fileID: 224651268913489168, guid: b3cd6e1f0748549cc9d49f9b056b0ea6,
+    type: 2}
+  TweetContainer: {fileID: 563792021}
+  ScrollSpeed: 100
+  SourceFile: Credits
+--- !u!114 &133710592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133710589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &133710593
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133710589}
 --- !u!1001 &138894932
 Prefab:
   m_ObjectHideFlags: 0
@@ -437,7 +523,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foobar: 
   devName: Lars
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
@@ -578,7 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foobar: 
   devName: Steffen
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
@@ -625,7 +709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foobar: 
   devName: Christian
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
@@ -659,7 +742,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 644308282}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -705,6 +788,76 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 540621555}
+--- !u!1 &563792020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 563792021}
+  - component: {fileID: 563792023}
+  - component: {fileID: 563792022}
+  m_Layer: 0
+  m_Name: TweetContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &563792021
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563792020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 133710590}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &563792022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563792020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
+--- !u!114 &563792023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563792020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 0
 --- !u!1 &644308281
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +886,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 133710590}
   - {fileID: 540621556}
   - {fileID: 110904577}
   m_Father: {fileID: 1907688099}
@@ -840,7 +994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foobar: 
   devName: Andrea
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
@@ -887,7 +1040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foobar: 
   devName: Max
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
@@ -1033,7 +1185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foobar: 
   devName: Marco
   hair: {fileID: 21300000, guid: f456df8c62440624f99cc28273bf631d, type: 3}
   eyes: {fileID: 21300000, guid: 36cc5bbe185cdac4291babdb37da6153, type: 3}
@@ -1080,7 +1231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8da3810f91aa48a1838dcdead2d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foobar: 
   devName: Michael
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
