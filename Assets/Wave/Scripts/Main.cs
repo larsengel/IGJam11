@@ -27,8 +27,10 @@ namespace Wave
 
 		LEVEL_WON,
 		LEVEL_DEFEAT,
-		GAME_FINISHED
-	}
+		GAME_FINISHED,
+
+        TUTORIAL
+    }
 
 	public class GameState
 	{
@@ -83,8 +85,11 @@ namespace Wave
 			this.states.Add (
 				GameStates.GAME_FINISHED,
 				new GameState (GameStates.GAME_FINISHED, "GameFinished", new List<string> () { "Game", "GameFinished" }));
+            this.states.Add(
+                GameStates.TUTORIAL,
+                new GameState(GameStates.TUTORIAL, "Tutorial", new List<string>() { "Tutorial" }));
 
-			if (SceneManager.sceneCount <= 1) {
+            if (SceneManager.sceneCount <= 1) {
 				SwitchState (GameStates.START);
 			}
 

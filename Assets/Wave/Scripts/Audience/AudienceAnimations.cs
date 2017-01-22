@@ -63,6 +63,10 @@ public class AudienceAnimations : MonoBehaviour
         if (this.Animator == null) {
             this.Animator = this.GetComponent<Animator> ();
         }
+        if (this.Spectator == null)
+        {
+            this.Spectator = this.GetComponentInParent<Spectator>();
+        }
         this.ShieldLeft = new Shield {
             Root = Search (this.transform, "schild_left"),
             TextTransform = Search (this.transform, "text_left"),
@@ -83,7 +87,15 @@ public class AudienceAnimations : MonoBehaviour
 
         this.ShieldLeft.Show (false);
         this.ShieldRight.Show (false);
-        this.SetIdle ();
+
+        if (this.Spectator != null && this.Spectator.IsUpset)
+        {
+            this.SetIdle();
+        }
+        else
+        {
+            this.SetWave();
+        }
     }
 
     [Serializable]

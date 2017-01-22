@@ -1,40 +1,42 @@
-﻿namespace Wave.StageReady
+﻿using UnityEngine.UI;
+
+namespace Wave.StageReady
 {
-    using UnityEngine;
-    using UnityEngine.Events;
+	using UnityEngine;
+	using UnityEngine.Events;
 
-    using Wave.Levels;
+	using Wave.Levels;
 
-    public class StageReadyBehaviour : MonoBehaviour
-    {
-        public UnityEvent LevelLoaded;
+	public class StageReadyBehaviour : MonoBehaviour
+	{
+		public UnityEvent LevelLoaded;
 
-        public LevelSystem LevelSystem;
+		public LevelSystem LevelSystem;
 
-        public void StartLevel ()
-        {
-            if (this.LevelSystem != null) {
-                this.LevelSystem.StartLevel ();
-            }
-        }
+		public void StartLevel ()
+		{
+			if (this.LevelSystem != null) {
+				this.LevelSystem.StartLevel ();
+			}
+		}
 
-        private void OnDisable ()
-        {
-            this.LevelSystem.LevelLoaded -= this.OnLevelLoaded;
-        }
+		private void OnDisable ()
+		{
+			this.LevelSystem.LevelLoaded -= this.OnLevelLoaded;
+		}
 
-        private void OnEnable ()
-        {
-            this.LevelSystem = FindObjectOfType<LevelSystem> ();
-            if (this.LevelSystem != null) {
-                this.LevelSystem.LevelLoaded += this.OnLevelLoaded;
-            }
-        }
+		private void OnEnable ()
+		{
+			this.LevelSystem = FindObjectOfType<LevelSystem> ();
+			if (this.LevelSystem != null) {
+				this.LevelSystem.LevelLoaded += this.OnLevelLoaded;
+			}
+		}
 
-        private void OnLevelLoaded ()
-        {
-            this.LevelLoaded.Invoke ();
-        }
+		private void OnLevelLoaded ()
+		{
+			this.LevelLoaded.Invoke ();
+		}
         
-    }
+	}
 }

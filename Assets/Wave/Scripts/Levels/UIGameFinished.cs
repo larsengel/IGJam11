@@ -1,22 +1,29 @@
 ﻿namespace Wave.Levels
 {
-    using UnityEngine;
+	using UnityEngine;
 
-    public class UIGameFinished : MonoBehaviour
-    {
-        private Main main;
+	public class UIGameFinished : MonoBehaviour
+	{
+		private Main main;
 
-        public void ToCredits()
-        {
-            if (this.main != null)
-            {
-                this.main.SwitchState(GameStates.CREDITS);
-            }
-        }
+		private StatsSystem statsSystem;
 
-        private void Start()
-        {
-            this.main = FindObjectOfType<Main>();
-        }
-    }
+		public void ToCredits ()
+		{
+			if (this.main != null) {
+				this.main.SwitchState (GameStates.CREDITS);
+			}
+		}
+
+		private void Start ()
+		{
+			this.main = FindObjectOfType<Main> ();
+
+			statsSystem = FindObjectOfType<StatsSystem> ();
+			if (statsSystem != null) {
+				var score = statsSystem.AvaragePoints;
+
+			}
+		}
+	}
 }

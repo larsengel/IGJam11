@@ -43,3 +43,5 @@ EditorBuildSettings:
     path: Assets/Wave/Scenes/Level/Level8.unity
   - enabled: 1
     path: Assets/Wave/Scenes/Level/Level9.unity
+  - enabled: 1
+    path: Assets/Wave/Scripts/Tutorial/Tutorial.unity
