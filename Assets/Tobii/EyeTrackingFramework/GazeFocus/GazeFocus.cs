@@ -26,6 +26,18 @@ namespace Tobii.EyeTracking
         private bool _useMouseEmulation = true; // TODO: use logic that can be controlled from UnityEditor?
         private Camera _camera;
 
+        public bool UseMouseEmulation
+        {
+            get
+            {
+                return _useMouseEmulation;
+            }
+            set
+            {
+                _useMouseEmulation = value;
+            }
+        }
+
         //---------------------------------------------------------------------
         // Implementing IGazeFocus
         //---------------------------------------------------------------------

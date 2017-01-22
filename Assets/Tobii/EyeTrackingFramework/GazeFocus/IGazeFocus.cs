@@ -23,5 +23,7 @@ namespace Tobii.EyeTracking
         /// </para>
         /// </summary>
         FocusedObject FocusedObject { get; }
+
+        bool UseMouseEmulation { get; set; }
     }
 }
