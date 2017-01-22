@@ -2254,7 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOrder: 0
-  applySpriterZOrder: 0
+  applySpriterZOrder: 1
 --- !u!114 &114453801381174424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2302,7 +2302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOrder: 0
-  applySpriterZOrder: 0
+  applySpriterZOrder: 1
 --- !u!114 &114814896989401196
 MonoBehaviour:
   m_ObjectHideFlags: 1

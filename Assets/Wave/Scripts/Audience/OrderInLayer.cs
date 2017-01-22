@@ -18,5 +18,25 @@ public class OrderInLayer : MonoBehaviour {
 	        renderer.sortingOrder = order;
 	    }
 
+	    Search(transform, "schild_ani_right").GetComponent<EntityRenderer>().SortingOrder += Offset;
+	    Search(transform, "schild_ani_left").GetComponent<EntityRenderer>().SortingOrder += Offset;
+
 	}
+
+    public static Transform Search (Transform target, string name)
+    {
+        if (target.name == name) {
+            return target;
+        }
+
+        for (int i = 0; i < target.childCount; ++i) {
+            var result = Search (target.GetChild (i), name);
+
+            if (result != null) {
+                return result;
+            }
+        }
+
+        return null;
+    }
 }
