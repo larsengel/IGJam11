@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   devName: Andrea
-  hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
+  hair: {fileID: 21300000, guid: f456df8c62440624f99cc28273bf631d, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
   mouth: {fileID: 21300000, guid: 9bd91fe5537b7f645b41878d86eb18c2, type: 3}
@@ -1053,10 +1053,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   devName: Max
-  hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
+  hair: {fileID: 21300000, guid: 4417b7cc447ee2846a149260e7dee199, type: 3}
   eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
-  mouth: {fileID: 21300000, guid: 9bd91fe5537b7f645b41878d86eb18c2, type: 3}
+  mouth: {fileID: 21300000, guid: f123a54950f11ff429dd6d222a09d779, type: 3}
 --- !u!4 &1205837227 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4375165954897406, guid: 219f7f1016b919443bf80e9923ef7a08,
@@ -1338,10 +1338,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   devName: Michael
-  hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
-  eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
-  nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
-  mouth: {fileID: 21300000, guid: 9bd91fe5537b7f645b41878d86eb18c2, type: 3}
+  hair: {fileID: 21300000, guid: 4417b7cc447ee2846a149260e7dee199, type: 3}
+  eyes: {fileID: 21300000, guid: e1e920f38ce0a2d4c8402d8fff47970c, type: 3}
+  nose: {fileID: 21300000, guid: 32704d18156f3ad429f0fa1ca5910f1a, type: 3}
+  mouth: {fileID: 21300000, guid: f123a54950f11ff429dd6d222a09d779, type: 3}
 --- !u!1 &1907688098
 GameObject:
   m_ObjectHideFlags: 0
