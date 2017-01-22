@@ -29,6 +29,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1358032337123090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224892097105790584}
+  - component: {fileID: 222895221305980140}
+  - component: {fileID: 114386926625939194}
+  m_Layer: 5
+  m_Name: BodyText (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1562505324519466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224866391278348350}
+  - component: {fileID: 222319441659623064}
+  - component: {fileID: 114416729163892284}
+  m_Layer: 5
+  m_Name: BodyText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1564972802750382
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +108,7 @@ GameObject:
   - component: {fileID: 222367438916460754}
   - component: {fileID: 114438599701382468}
   m_Layer: 5
-  m_Name: BodyText
+  m_Name: BodyText (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,8 +146,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_Font: {fileID: 12800000, guid: d78730a4197c74d1fb7f1582b8565efd, type: 3}
+    m_FontSize: 41
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -125,6 +159,220 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: News
+--- !u!114 &114386926625939194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358032337123090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 7
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "We, the citizens of America, are now joined in a great national effort
+    to rebuild our country and to restore its promise for all of our people.\n\nTogether,
+    we will determine the course of America and the world for years to come.\n\nWe
+    will face challenges. We will confront hardships. But we will get the job done.\n\nEvery
+    four years, we gather on these steps to carry out the orderly and peaceful transfer
+    of power, and we are grateful to President Obama and First Lady Michelle Obama
+    for their gracious aid throughout this transition. They have been magnificent.\n\nToday\u2019s
+    ceremony, however, has very special meaning. Because today we are not merely transferring
+    power from one Administration to another, or from one party to another \u2013
+    but we are transferring power from Washington, D.C. and giving it back to you,
+    the American People.\n\nFor too long, a small group in our nation\u2019s Capital
+    has reaped the rewards of government while the people have borne the cost.\n\nWashington
+    flourished \u2013 but the people did not share in its wealth.\n\nPoliticians prospered
+    \u2013 but the jobs left, and the factories closed.\n\nThe establishment protected
+    itself, but not the citizens of our country.\n\nTheir victories have not been
+    your victories; their triumphs have not been your triumphs; and while they celebrated
+    in our nation\u2019s Capital, there was little to celebrate for struggling families
+    all across our land.\n\nThat all changes \u2013 starting right here, and right
+    now, because this moment is your moment: it belongs to you.\n\nIt belongs to everyone
+    gathered here today and everyone watching all across America. \n\nThis is your
+    day. This is your celebration.\n\nAnd this, the United States of America, is your
+    country.\n\nWhat truly matters is not which party controls our government, but
+    whether our government is controlled by the people.\n\nJanuary 20th 2017, will
+    be remembered as the day the people became the rulers of this nation again. \n\nThe
+    forgotten men and women of our country will be forgotten no longer.\n\nEveryone
+    is listening to you now.\n\nYou came by the tens of millions to become part of
+    a historic movement the likes of which the world has never seen before.\n\nAt
+    the center of this movement is a crucial conviction: that a nation exists to serve
+    its citizens.\n\nAmericans want great schools for their children, safe neighborhoods
+    for their families, and good jobs for themselves.\n\nThese are the just and reasonable
+    demands of a righteous public.\n\nBut for too many of our citizens, a different
+    reality exists: Mothers and children trapped in poverty in our inner cities; rusted-out
+    factories scattered like tombstones across the landscape of our nation; an education
+    system, flush with cash, but which leaves our young and beautiful students deprived
+    of knowledge; and the crime and gangs and drugs that have stolen too many lives
+    and robbed our country of so much unrealized potential.\n\nThis American carnage
+    stops right here and stops right now.\n\nWe are one nation \u2013 and their pain
+    is our pain.  Their dreams are our dreams; and their success will be our success.
+    \ We share one heart, one home, and one glorious destiny.\n\nThe oath of office
+    I take today is an oath of allegiance to all Americans.\n\nFor many decades, we\u2019ve
+    enriched foreign industry at the expense of American industry;\n\nSubsidized the
+    armies of other countries while allowing for the very sad depletion of our military;\n\nWe've
+    defended other nation\u2019s borders while refusing to defend our own;\n\nAnd
+    spent trillions of dollars overseas while America's infrastructure has fallen
+    into disrepair and decay.\n\nWe\u2019ve made other countries rich while the wealth,
+    strength, and confidence of our country has disappeared over the horizon.\n\nOne
+    by one, the factories shuttered and left our shores, with not even a thought about
+    the millions upon millions of American workers left behind.\n\nThe wealth of our
+    middle class has been ripped from their homes and then redistributed across the
+    entire world.\n\nBut that is the past. And now we are looking only to the future.\n\nWe
+    assembled here today are issuing a new decree to be heard in every city, in every
+    foreign capital, and in every hall of power.\n\nFrom this day forward, a new vision
+    will govern our land.\n\nFrom this moment on, it\u2019s going to be America First.\n\nEvery
+    decision on trade, on taxes, on immigration, on foreign affairs, will be made
+    to benefit American workers and American families.\n\nWe must protect our borders
+    from the ravages of other countries making our products, stealing our companies,
+    and destroying our jobs.  Protection will lead to great prosperity and strength.\n\nI
+    will fight for you with every breath in my body \u2013 and I will never, ever
+    let you down.\n\nAmerica will start winning again, winning like never before.\n\nWe
+    will bring back our jobs. We will bring back our borders.  We will bring back
+    our wealth.  And we will bring back our dreams.\n\nWe will build new roads, and
+    highways, and bridges, and airports, and tunnels, and railways all across our
+    wonderful nation.\n\nWe will get our people off of welfare and back to work \u2013
+    rebuilding our country with American hands and American labor.\n\nWe will follow
+    two simple rules: Buy American and Hire American.\n\nWe will seek friendship and
+    goodwill with the nations of the world \u2013 but we do so with the understanding
+    that it is the right of all nations to put their own interests first.\n\nWe do
+    not seek to impose our way of life on anyone, but rather to let it shine as an
+    example for everyone to follow.\n\nWe will reinforce old alliances and form new
+    ones \u2013 and unite the civilized world against Radical Islamic Terrorism, which
+    we will eradicate completely from the face of the Earth.\n\nAt the bedrock of
+    our politics will be a total allegiance to the United States of America, and through
+    our loyalty to our country, we will rediscover our loyalty to each other.\n\nWhen
+    you open your heart to patriotism, there is no room for prejudice.\n\nThe Bible
+    tells us, \u201Chow good and pleasant it is when God\u2019s people live together
+    in unity.\u201D\n\nWe must speak our minds openly, debate our disagreements honestly,
+    but always pursue solidarity.\n\nWhen America is united, America is totally unstoppable.\n\nThere
+    should be no fear \u2013 we are protected, and we will always be protected.\n\nWe
+    will be protected by the great men and women of our military and law enforcement
+    and, most importantly, we are protected by God.\n\nFinally, we must think big
+    and dream even bigger.\n\nIn America, we understand that a nation is only living
+    as long as it is striving.\n\nWe will no longer accept politicians who are all
+    talk and no action \u2013 constantly complaining but never doing anything about
+    it.\n\nThe time for empty talk is over.\n\nNow arrives the hour of action.\n\nDo
+    not let anyone tell you it cannot be done.  No challenge can match the heart and
+    fight and spirit of America.\n\nWe will not fail. Our country will thrive and
+    prosper again.\n\nWe stand at the birth of a new millennium, ready to unlock the
+    mysteries of space, to free the Earth from the miseries of disease, and to harness
+    the energies, industries and technologies of tomorrow.\n\nA new national pride
+    will stir our souls, lift our sights, and heal our divisions.\n\nIt is time to
+    remember that old wisdom our soldiers will never forget: that whether we are black
+    or brown or white, we all bleed the same red blood of patriots, we all enjoy the
+    same glorious freedoms, and we all salute the same great American Flag.\n\nAnd
+    whether a child is born in the urban sprawl of Detroit or the windswept plains
+    of Nebraska, they look up at the same night sky, they fill their heart with the
+    same dreams, and they are infused with the breath of life by the same almighty
+    Creator.\n\nSo to all Americans, in every city near and far, small and large,
+    from mountain to mountain, and from ocean to ocean, hear these words:\n\nYou will
+    never be ignored again.\n\nYour voice, your hopes, and your dreams, will define
+    our American destiny. And your courage and goodness and love will forever guide
+    us along the way.\n\nTogether, We Will Make America Strong Again.\n\nWe Will Make
+    America Wealthy Again.\n\nWe Will Make America Proud Again.\n\nWe Will Make America
+    Safe Again.\n\nAnd, Yes, Together, We Will Make America Great Again. Thank you,
+    God Bless You, And God Bless America."
+--- !u!114 &114416729163892284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1562505324519466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 7
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "America will start winning again, winning like never before.\n\nWe will
+    bring back our jobs. We will bring back our borders.  We will bring back our wealth.
+    \ And we will bring back our dreams.\n\nWe will build new roads, and highways,
+    and bridges, and airports, and tunnels, and railways all across our wonderful
+    nation.\n\nWe will get our people off of welfare and back to work \u2013 rebuilding
+    our country with American hands and American labor.\n\nWe will follow two simple
+    rules: Buy American and Hire American.\n\nWe will seek friendship and goodwill
+    with the nations of the world \u2013 but we do so with the understanding that
+    it is the right of all nations to put their own interests first.\n\nWe do not
+    seek to impose our way of life on anyone, but rather to let it shine as an example
+    for everyone to follow.\n\nWe will reinforce old alliances and form new ones \u2013
+    and unite the civilized world against Radical Islamic Terrorism, which we will
+    eradicate completely from the face of the Earth.\n\nAt the bedrock of our politics
+    will be a total allegiance to the United States of America, and through our loyalty
+    to our country, we will rediscover our loyalty to each other.\n\nWhen you open
+    your heart to patriotism, there is no room for prejudice.\n\nThe Bible tells us,
+    \u201Chow good and pleasant it is when God\u2019s people live together in unity.\u201D\n\nWe
+    must speak our minds openly, debate our disagreements honestly, but always pursue
+    solidarity.\n\nWhen America is united, America is totally unstoppable.\n\nThere
+    should be no fear \u2013 we are protected, and we will always be protected.\n\nWe
+    will be protected by the great men and women of our military and law enforcement
+    and, most importantly, we are protected by God.\n\nFinally, we must think big
+    and dream even bigger.\n\nIn America, we understand that a nation is only living
+    as long as it is striving.\n\nWe will no longer accept politicians who are all
+    talk and no action \u2013 constantly complaining but never doing anything about
+    it.\n\nThe time for empty talk is over.\n\nNow arrives the hour of action.\n\nDo
+    not let anyone tell you it cannot be done.  No challenge can match the heart and
+    fight and spirit of America.\n\nWe will not fail. Our country will thrive and
+    prosper again.\n\nWe stand at the birth of a new millennium, ready to unlock the
+    mysteries of space, to free the Earth from the miseries of disease, and to harness
+    the energies, industries and technologies of tomorrow.\n\nA new national pride
+    will stir our souls, lift our sights, and heal our divisions.\n\nIt is time to
+    remember that old wisdom our soldiers will never forget: that whether we are black
+    or brown or white, we all bleed the same red blood of patriots, we all enjoy the
+    same glorious freedoms, and we all salute the same great American Flag.\n\nAnd
+    whether a child is born in the urban sprawl of Detroit or the windswept plains
+    of Nebraska, they look up at the same night sky, they fill their heart with the
+    same dreams, and they are infused with the breath of life by the same almighty
+    Creator.\n\nSo to all Americans, in every city near and far, small and large,
+    from mountain to mountain, and from ocean to ocean, hear these words:\n\nYou will
+    never be ignored again.\n\nYour voice, your hopes, and your dreams, will define
+    our American destiny. And your courage and goodness and love will forever guide
+    us along the way.\n\nTogether, We Will Make America Strong Again.\n\nWe Will Make
+    America Wealthy Again.\n\nWe Will Make America Proud Again.\n\nWe Will Make America
+    Safe Again.\n\nAnd, Yes, Together, We Will Make America Great Again. Thank you,
+    God Bless You, And God Bless America."
 --- !u!114 &114438599701382468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -146,10 +394,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 6
+    m_FontSize: 7
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -157,28 +405,110 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla
-    blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla.
-    Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub
-    bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla
-    blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla.
-    Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub
-    bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla
-    blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla.
-    Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub
-    bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla
-    blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla.
-    Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub
-    bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla
-    blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla.
-    Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub
-    bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla
-    blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla.
-    Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub
-    bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla
-    blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla.
-    Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub bla. Bla blub
-    bla. Bla blub bla. '
+  m_Text: "We, the citizens of America, are now joined in a great national effort
+    to rebuild our country and to restore its promise for all of our people.\n\nTogether,
+    we will determine the course of America and the world for years to come.\n\nWe
+    will face challenges. We will confront hardships. But we will get the job done.\n\nEvery
+    four years, we gather on these steps to carry out the orderly and peaceful transfer
+    of power, and we are grateful to President Obama and First Lady Michelle Obama
+    for their gracious aid throughout this transition. They have been magnificent.\n\nToday\u2019s
+    ceremony, however, has very special meaning. Because today we are not merely transferring
+    power from one Administration to another, or from one party to another \u2013
+    but we are transferring power from Washington, D.C. and giving it back to you,
+    the American People.\n\nFor too long, a small group in our nation\u2019s Capital
+    has reaped the rewards of government while the people have borne the cost.\n\nWashington
+    flourished \u2013 but the people did not share in its wealth.\n\nPoliticians prospered
+    \u2013 but the jobs left, and the factories closed.\n\nThe establishment protected
+    itself, but not the citizens of our country.\n\nTheir victories have not been
+    your victories; their triumphs have not been your triumphs; and while they celebrated
+    in our nation\u2019s Capital, there was little to celebrate for struggling families
+    all across our land.\n\nThat all changes \u2013 starting right here, and right
+    now, because this moment is your moment: it belongs to you.\n\nIt belongs to everyone
+    gathered here today and everyone watching all across America. \n\nThis is your
+    day. This is your celebration.\n\nAnd this, the United States of America, is your
+    country.\n\nWhat truly matters is not which party controls our government, but
+    whether our government is controlled by the people.\n\nJanuary 20th 2017, will
+    be remembered as the day the people became the rulers of this nation again. \n\nThe
+    forgotten men and women of our country will be forgotten no longer.\n\nEveryone
+    is listening to you now.\n\nYou came by the tens of millions to become part of
+    a historic movement the likes of which the world has never seen before.\n\nAt
+    the center of this movement is a crucial conviction: that a nation exists to serve
+    its citizens.\n\nAmericans want great schools for their children, safe neighborhoods
+    for their families, and good jobs for themselves.\n\nThese are the just and reasonable
+    demands of a righteous public.\n\nBut for too many of our citizens, a different
+    reality exists: Mothers and children trapped in poverty in our inner cities; rusted-out
+    factories scattered like tombstones across the landscape of our nation; an education
+    system, flush with cash, but which leaves our young and beautiful students deprived
+    of knowledge; and the crime and gangs and drugs that have stolen too many lives
+    and robbed our country of so much unrealized potential.\n\nThis American carnage
+    stops right here and stops right now.\n\nWe are one nation \u2013 and their pain
+    is our pain.  Their dreams are our dreams; and their success will be our success.
+    \ We share one heart, one home, and one glorious destiny.\n\nThe oath of office
+    I take today is an oath of allegiance to all Americans.\n\nFor many decades, we\u2019ve
+    enriched foreign industry at the expense of American industry;\n\nSubsidized the
+    armies of other countries while allowing for the very sad depletion of our military;\n\nWe've
+    defended other nation\u2019s borders while refusing to defend our own;\n\nAnd
+    spent trillions of dollars overseas while America's infrastructure has fallen
+    into disrepair and decay.\n\nWe\u2019ve made other countries rich while the wealth,
+    strength, and confidence of our country has disappeared over the horizon.\n\nOne
+    by one, the factories shuttered and left our shores, with not even a thought about
+    the millions upon millions of American workers left behind.\n\nThe wealth of our
+    middle class has been ripped from their homes and then redistributed across the
+    entire world.\n\nBut that is the past. And now we are looking only to the future.\n\nWe
+    assembled here today are issuing a new decree to be heard in every city, in every
+    foreign capital, and in every hall of power.\n\nFrom this day forward, a new vision
+    will govern our land.\n\nFrom this moment on, it\u2019s going to be America First.\n\nEvery
+    decision on trade, on taxes, on immigration, on foreign affairs, will be made
+    to benefit American workers and American families.\n\nWe must protect our borders
+    from the ravages of other countries making our products, stealing our companies,
+    and destroying our jobs.  Protection will lead to great prosperity and strength.\n\nI
+    will fight for you with every breath in my body \u2013 and I will never, ever
+    let you down.\n\nAmerica will start winning again, winning like never before.\n\nWe
+    will bring back our jobs. We will bring back our borders.  We will bring back
+    our wealth.  And we will bring back our dreams.\n\nWe will build new roads, and
+    highways, and bridges, and airports, and tunnels, and railways all across our
+    wonderful nation.\n\nWe will get our people off of welfare and back to work \u2013
+    rebuilding our country with American hands and American labor.\n\nWe will follow
+    two simple rules: Buy American and Hire American.\n\nWe will seek friendship and
+    goodwill with the nations of the world \u2013 but we do so with the understanding
+    that it is the right of all nations to put their own interests first.\n\nWe do
+    not seek to impose our way of life on anyone, but rather to let it shine as an
+    example for everyone to follow.\n\nWe will reinforce old alliances and form new
+    ones \u2013 and unite the civilized world against Radical Islamic Terrorism, which
+    we will eradicate completely from the face of the Earth.\n\nAt the bedrock of
+    our politics will be a total allegiance to the United States of America, and through
+    our loyalty to our country, we will rediscover our loyalty to each other.\n\nWhen
+    you open your heart to patriotism, there is no room for prejudice.\n\nThe Bible
+    tells us, \u201Chow good and pleasant it is when God\u2019s people live together
+    in unity.\u201D\n\nWe must speak our minds openly, debate our disagreements honestly,
+    but always pursue solidarity.\n\nWhen America is united, America is totally unstoppable.\n\nThere
+    should be no fear \u2013 we are protected, and we will always be protected.\n\nWe
+    will be protected by the great men and women of our military and law enforcement
+    and, most importantly, we are protected by God.\n\nFinally, we must think big
+    and dream even bigger.\n\nIn America, we understand that a nation is only living
+    as long as it is striving.\n\nWe will no longer accept politicians who are all
+    talk and no action \u2013 constantly complaining but never doing anything about
+    it.\n\nThe time for empty talk is over.\n\nNow arrives the hour of action.\n\nDo
+    not let anyone tell you it cannot be done.  No challenge can match the heart and
+    fight and spirit of America.\n\nWe will not fail. Our country will thrive and
+    prosper again.\n\nWe stand at the birth of a new millennium, ready to unlock the
+    mysteries of space, to free the Earth from the miseries of disease, and to harness
+    the energies, industries and technologies of tomorrow.\n\nA new national pride
+    will stir our souls, lift our sights, and heal our divisions.\n\nIt is time to
+    remember that old wisdom our soldiers will never forget: that whether we are black
+    or brown or white, we all bleed the same red blood of patriots, we all enjoy the
+    same glorious freedoms, and we all salute the same great American Flag.\n\nAnd
+    whether a child is born in the urban sprawl of Detroit or the windswept plains
+    of Nebraska, they look up at the same night sky, they fill their heart with the
+    same dreams, and they are infused with the breath of life by the same almighty
+    Creator.\n\nSo to all Americans, in every city near and far, small and large,
+    from mountain to mountain, and from ocean to ocean, hear these words:\n\nYou will
+    never be ignored again.\n\nYour voice, your hopes, and your dreams, will define
+    our American destiny. And your courage and goodness and love will forever guide
+    us along the way.\n\nTogether, We Will Make America Strong Again.\n\nWe Will Make
+    America Wealthy Again.\n\nWe Will Make America Proud Again.\n\nWe Will Make America
+    Safe Again.\n\nAnd, Yes, Together, We Will Make America Great Again. Thank you,
+    God Bless You, And God Bless America."
 --- !u!114 &114785006834045436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,8 +529,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: 2dc3c129f07434756860ac4b3d11ba91, type: 3}
+    m_FontSize: 38
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -252,6 +582,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1589517014703948}
+--- !u!222 &222319441659623064
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1562505324519466}
 --- !u!222 &222367438916460754
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -264,6 +600,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1564972802750382}
+--- !u!222 &222895221305980140
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358032337123090}
 --- !u!224 &224136980572020530
 RectTransform:
   m_ObjectHideFlags: 1
@@ -297,7 +639,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: -4, y: -39}
   m_SizeDelta: {x: -40, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224521026000834640
@@ -306,6 +648,24 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1729653889813664}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999905, y: 0.9999905, z: 0.99999034}
+  m_Children: []
+  m_Father: {fileID: 224936301501899892}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 42, y: -83}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224866391278348350
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1562505324519466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -313,10 +673,28 @@ RectTransform:
   m_Father: {fileID: 224936301501899892}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -240}
-  m_SizeDelta: {x: -40, y: 100}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -175, y: -82}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224892097105790584
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358032337123090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999905, y: 0.9999905, z: 0.99999034}
+  m_Children: []
+  m_Father: {fileID: 224936301501899892}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 217, y: -79}
+  m_SizeDelta: {x: 100, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224936301501899892
 RectTransform:
@@ -324,18 +702,20 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1114473896491024}
-  m_LocalRotation: {x: 0, y: 0, z: 0.078459114, w: 0.99691737}
+  m_LocalRotation: {x: -0, y: -0, z: 0.078459114, w: 0.99691737}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224355937455713878}
   - {fileID: 224136980572020530}
+  - {fileID: 224866391278348350}
+  - {fileID: 224892097105790584}
   - {fileID: 224521026000834640}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: 0}
-  m_SizeDelta: {x: 400, y: 300}
+  m_AnchoredPosition: {x: -512, y: 0}
+  m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
