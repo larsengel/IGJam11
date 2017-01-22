@@ -9,7 +9,6 @@ public class RandomCityName : MonoBehaviour
 {
 
 	string[] lines;
-	int CurrentLine = 0;
 	public StageReadyBehaviour stageReadyBehaviour;
 
 	void Awake ()
@@ -20,7 +19,6 @@ public class RandomCityName : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		Debug.Log (stageReadyBehaviour.LevelSystem.CurrentConfiguration.LevelId.ToString ().Replace ("LEVEL", ""));
 		this.gameObject.GetComponent<Text> ().text = lines [Random.Range (0, lines.Length)];
 	}
 
