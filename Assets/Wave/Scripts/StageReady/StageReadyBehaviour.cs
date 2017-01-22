@@ -11,28 +11,29 @@
 
         public LevelSystem LevelSystem;
 
-        public void StartLevel()
+        public void StartLevel ()
         {
-            if (this.LevelSystem != null)
-            {
-                this.LevelSystem.StartLevel();
+            if (this.LevelSystem != null) {
+                this.LevelSystem.StartLevel ();
             }
         }
 
-        private void OnDisable()
+        private void OnDisable ()
         {
             this.LevelSystem.LevelLoaded -= this.OnLevelLoaded;
         }
 
-        private void OnEnable()
+        private void OnEnable ()
         {
-            this.LevelSystem = FindObjectOfType<LevelSystem>();
-            this.LevelSystem.LevelLoaded += this.OnLevelLoaded;
+            this.LevelSystem = FindObjectOfType<LevelSystem> ();
+            if (this.LevelSystem != null) {
+                this.LevelSystem.LevelLoaded += this.OnLevelLoaded;
+            }
         }
 
-        private void OnLevelLoaded()
+        private void OnLevelLoaded ()
         {
-            this.LevelLoaded.Invoke();
+            this.LevelLoaded.Invoke ();
         }
         
     }

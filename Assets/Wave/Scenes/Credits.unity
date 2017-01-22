@@ -672,8 +672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   devName: Steffen
   hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
-  eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
-  nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
+  eyes: {fileID: 21300000, guid: 36cc5bbe185cdac4291babdb37da6153, type: 3}
+  nose: {fileID: 21300000, guid: 32704d18156f3ad429f0fa1ca5910f1a, type: 3}
   mouth: {fileID: 21300000, guid: 9bd91fe5537b7f645b41878d86eb18c2, type: 3}
 --- !u!1 &538264384
 GameObject:
