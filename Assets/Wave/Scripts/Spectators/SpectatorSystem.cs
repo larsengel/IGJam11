@@ -44,7 +44,8 @@
 
 		private void MakeSpectatorsWave ()
 		{
-			foreach (var spectator in this.Spectators) {
+			for (int i = 0, maxSpectatorsCount = this.Spectators.Count; i < maxSpectatorsCount; i++) {
+				var spectator = this.Spectators [i];
 				AudioSource audioSource = spectator.GetComponent<AudioSource> ();
 				audioSource.volume = 0.0f;
 				spectator.MakeHappy ();
@@ -55,7 +56,8 @@
 
 		private void EnableSoundOnSpectators ()
 		{
-			foreach (var spectator in this.Spectators) {
+			for (int i = 0, maxSpectatorsCount = this.Spectators.Count; i < maxSpectatorsCount; i++) {
+				var spectator = this.Spectators [i];
 				AudioSource audioSource = spectator.GetComponent<AudioSource> ();
 				audioSource.volume = 1.0f;
 			}

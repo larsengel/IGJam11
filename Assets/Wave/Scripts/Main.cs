@@ -29,8 +29,8 @@ namespace Wave
 		LEVEL_DEFEAT,
 		GAME_FINISHED,
 
-        TUTORIAL
-    }
+		TUTORIAL
+	}
 
 	public class GameState
 	{
@@ -86,11 +86,11 @@ namespace Wave
 			this.states.Add (
 				GameStates.GAME_FINISHED,
 				new GameState (GameStates.GAME_FINISHED, "GameFinished", new List<string> () { "Game", "GameFinished" }));
-            this.states.Add(
-                GameStates.TUTORIAL,
-                new GameState(GameStates.TUTORIAL, "Tutorial", new List<string>() { "Tutorial" }));
+			this.states.Add (
+				GameStates.TUTORIAL,
+				new GameState (GameStates.TUTORIAL, "Tutorial", new List<string> () { "Tutorial" }));
 
-            if (SceneManager.sceneCount <= 1) {
+			if (SceneManager.sceneCount <= 1) {
 				SwitchState (GameStates.START);
 			}
 
@@ -122,12 +122,14 @@ namespace Wave
 
 			if (unloadAssets != null) {
 
-				foreach (var asset_id in unloadAssets) {
-					AssetProvider.UnloadAsset (asset_id);    
+				for (var i = unloadAssets.GetEnumerator (); i.MoveNext ();) {
+					var asset_id = i.Current;
+					AssetProvider.UnloadAsset (asset_id);
 				}
 			}  
 
-			foreach (var asset_id in loadAssets) {
+			for (var i = loadAssets.GetEnumerator (); i.MoveNext ();) {
+				var asset_id = i.Current;
 				AssetProvider.LoadAssetAsync (asset_id);
 			}
            
