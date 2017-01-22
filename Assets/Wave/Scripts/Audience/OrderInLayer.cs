@@ -14,11 +14,9 @@ public class OrderInLayer : MonoBehaviour {
 
 	    foreach (var renderer in GetComponentsInChildren<Renderer>())
 	    {
-	        renderer.sortingOrder += Offset;
+	        var order = renderer.sortingOrder + Offset;
+	        renderer.sortingOrder = order;
 	    }
-	    foreach (var renderer in GetComponentsInChildren<EntityRenderer>())
-	    {
-	        renderer.SortingOrder += Offset;
-	    }
+
 	}
 }
