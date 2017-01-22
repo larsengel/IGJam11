@@ -355,12 +355,12 @@ Prefab:
     - target: {fileID: 224351929643809552, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: -19.230766
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224119096927652098, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 96.92307
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224376157613710030, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
@@ -737,8 +737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   devName: Christian
-  hair: {fileID: 21300000, guid: 3667bbc8f46046147b393c34677b6ba4, type: 3}
-  eyes: {fileID: 21300000, guid: 878909cbaaad9b5479fdad75218bf274, type: 3}
+  hair: {fileID: 21300000, guid: 4417b7cc447ee2846a149260e7dee199, type: 3}
+  eyes: {fileID: 21300000, guid: 36cc5bbe185cdac4291babdb37da6153, type: 3}
   nose: {fileID: 21300000, guid: 61945b8cba127b8429567fab701a476e, type: 3}
   mouth: {fileID: 21300000, guid: 9bd91fe5537b7f645b41878d86eb18c2, type: 3}
 --- !u!1 &540621555
