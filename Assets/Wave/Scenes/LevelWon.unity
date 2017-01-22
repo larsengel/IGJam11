@@ -257,12 +257,12 @@ Prefab:
     - target: {fileID: 224936301501899892, guid: 5952fbd72e2fd45458d6753496600466,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 500
+      value: 645.8
       objectReference: {fileID: 0}
     - target: {fileID: 224936301501899892, guid: 5952fbd72e2fd45458d6753496600466,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -171
       objectReference: {fileID: 0}
     - target: {fileID: 224936301501899892, guid: 5952fbd72e2fd45458d6753496600466,
         type: 2}
@@ -630,7 +630,7 @@ Prefab:
     - target: {fileID: 224648327560813746, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -173
+      value: -218.8
       objectReference: {fileID: 0}
     - target: {fileID: 224648327560813746, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
@@ -710,7 +710,12 @@ Prefab:
     - target: {fileID: 224119096927652098, guid: f2cf431f0500345479f4261a79aa12e1,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 94.7457
+      value: 94.46808
+      objectReference: {fileID: 0}
+    - target: {fileID: 224119096927652098, guid: f2cf431f0500345479f4261a79aa12e1,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2cf431f0500345479f4261a79aa12e1, type: 2}
@@ -801,7 +806,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Winner!
+  m_Text: Success!
 --- !u!222 &733756986
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -858,12 +863,12 @@ Prefab:
     - target: {fileID: 224936301501899892, guid: 5952fbd72e2fd45458d6753496600466,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -509
+      value: 645.8
       objectReference: {fileID: 0}
     - target: {fileID: 224936301501899892, guid: 5952fbd72e2fd45458d6753496600466,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 9
+      value: -171
       objectReference: {fileID: 0}
     - target: {fileID: 224936301501899892, guid: 5952fbd72e2fd45458d6753496600466,
         type: 2}
