@@ -67,9 +67,10 @@ public class UITwitter : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		foreach (Transform child in TweetContainer) {
+		for (var i = TweetContainer.GetEnumerator (); i.MoveNext ();) {
+			Transform child = (Transform)i.Current;
 			var pos = child.position;
-			child.position = new Vector3 (pos.x - ScrollSpeed * Time.deltaTime, pos.y, pos.z); 
+			child.position = new Vector3 (pos.x - ScrollSpeed * Time.deltaTime, pos.y, pos.z);
 		}
 	}
 }
