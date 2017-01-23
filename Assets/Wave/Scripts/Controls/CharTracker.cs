@@ -52,8 +52,9 @@ public class CharTracker : MonoBehaviour
 	{
 		bool gazeAware = false;
 		#if UNITY_STANDALONE_WIN
-		gazeAware = gazeAware.HasGazeFocus
+		gazeAware = gazeAware.HasGazeFocus;
 		#endif
+
 		if (gazeAware || isMouseOver) {
 			statePoints += fadeSpeed * Time.deltaTime;
 			statePoints = Mathf.Clamp (statePoints, 0, 1);
