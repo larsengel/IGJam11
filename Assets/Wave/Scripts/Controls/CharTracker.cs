@@ -11,7 +11,6 @@ using UnityEngine;
 #if UNITY_STANDALONE_WIN
 [RequireComponent (typeof(GazeAware))]
 #endif
-
 public class CharTracker : MonoBehaviour
 {
 	public float statePoints;
@@ -20,7 +19,7 @@ public class CharTracker : MonoBehaviour
 	Color color2 = Color.green;
 
 	#if UNITY_STANDALONE_WIN
-    GazeAware gazeAware;
+	GazeAware gazeAware;
     #endif
 
 	SpriteRenderer sprite;
@@ -29,7 +28,7 @@ public class CharTracker : MonoBehaviour
 	void Start ()
 	{
 		#if UNITY_STANDALONE_WIN
-        gazeAware = GetComponent<GazeAware>();
+		gazeAware = GetComponent<GazeAware>();
 		#endif
 
 		sprite = GetComponent<SpriteRenderer> ();
@@ -50,12 +49,12 @@ public class CharTracker : MonoBehaviour
 
 	void Update ()
 	{
-		var gazeAware = false;
+		var isGazeAware = false;
 		#if UNITY_STANDALONE_WIN
-		gazeAware = gazeAware.HasGazeFocus;
+		isGazeAware = gazeAware.HasGazeFocus;
 		#endif
 
-		if (gazeAware || isMouseOver) {
+		if (isGazeAware || isMouseOver) {
 			statePoints += fadeSpeed * Time.deltaTime;
 			statePoints = Mathf.Clamp (statePoints, 0, 1);
 		} else {
