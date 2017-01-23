@@ -50,7 +50,7 @@ public class CharTracker : MonoBehaviour
 
 	void Update ()
 	{
-		bool gazeAware = false;
+		var gazeAware = false;
 		#if UNITY_STANDALONE_WIN
 		gazeAware = gazeAware.HasGazeFocus;
 		#endif
