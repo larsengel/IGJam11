@@ -1,59 +1,63 @@
 ﻿namespace Wave.Controls
 {
-    using Tobii.EyeTracking;
 
-    using UnityEngine;
-    using UnityEngine.Events;
+	#if UNITY_STANDALONE_WIN
+	    using Tobii.EyeTracking;
 
-    public class GazeEvents : MonoBehaviour
-    {
-        public UnityEvent GazeFocusGained;
+	    using UnityEngine;
+	    using UnityEngine.Events;
 
-        public UnityEvent GazeFocusLost;
+	    public class GazeEvents : MonoBehaviour
+	    {
+	        public UnityEvent GazeFocusGained;
 
-        public GazeAware Target;
-        
-        private bool hasGazeFocus;
+	        public UnityEvent GazeFocusLost;
 
-        public bool HasGazeFocus
-        {
-            get
-            {
-                return this.hasGazeFocus;
-            }
-            set
-            {
-                if (value == this.hasGazeFocus)
-                {
-                    return;
-                }
-                this.hasGazeFocus = value;
+	        public GazeAware Target;
+	        
+	        private bool hasGazeFocus;
 
-                if (value)
-                {
-                    this.GazeFocusGained.Invoke();
-                }
-                else
-                {
-                    this.GazeFocusLost.Invoke();
-                }
-            }
-        }
-        
-        private void Reset()
-        {
-            if (this.Target == null)
-            {
-                this.Target = this.GetComponent<GazeAware>();
-            }
-        }
+	        public bool HasGazeFocus
+	        {
+	            get
+	            {
+	                return this.hasGazeFocus;
+	            }
+	            set
+	            {
+	                if (value == this.hasGazeFocus)
+	                {
+	                    return;
+	                }
+	                this.hasGazeFocus = value;
 
-        private void Update()
-        {
-            if (this.Target != null)
-            {
-                this.HasGazeFocus = this.Target.HasGazeFocus;
-            }
-        }
-    }
+	                if (value)
+	                {
+	                    this.GazeFocusGained.Invoke();
+	                }
+	                else
+	                {
+	                    this.GazeFocusLost.Invoke();
+	                }
+	            }
+	        }
+	        
+	        private void Reset()
+	        {
+	            if (this.Target == null)
+	            {
+	                this.Target = this.GetComponent<GazeAware>();
+	            }
+	        }
+
+	        private void Update()
+	        {
+	            if (this.Target != null)
+	            {
+	                this.HasGazeFocus = this.Target.HasGazeFocus;
+	            }
+	        }
+	    }
+
+	#endif
 }

@@ -1,53 +1,68 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+
+#if UNITY_STANDALONE_WIN
 using Tobii.EyeTracking;
+#endif
+
 using UnityEngine;
 
-[RequireComponent(typeof(GazeAware))]
+#if UNITY_STANDALONE_WIN
+[RequireComponent (typeof(GazeAware))]
+#endif
+
 public class CharTracker : MonoBehaviour
 {
-    public float statePoints;
-    float fadeSpeed = 1;
-    Color color1 = Color.red;
-    Color color2 = Color.green;
+	public float statePoints;
+	float fadeSpeed = 1;
+	Color color1 = Color.red;
+	Color color2 = Color.green;
+
+	#if UNITY_STANDALONE_WIN
     GazeAware gazeAware;
-    SpriteRenderer sprite;
-    bool isMouseOver;
+    #endif
 
-    void Start()
-    {
+	SpriteRenderer sprite;
+	bool isMouseOver;
+
+	void Start ()
+	{
+		#if UNITY_STANDALONE_WIN
         gazeAware = GetComponent<GazeAware>();
-        sprite = GetComponent<SpriteRenderer>();
-        statePoints = 0f;
-    }
+		#endif
 
-    private void OnMouseEnter()
-    {
-        Debug.Log("OnMouseEnter");
-        isMouseOver = true;
-    }
+		sprite = GetComponent<SpriteRenderer> ();
+		statePoints = 0f;
+	}
 
-    private void OnMouseExit()
-    {
-        Debug.Log("OnMouseExit");
-        isMouseOver = false;
-    }
+	private void OnMouseEnter ()
+	{
+		Debug.Log ("OnMouseEnter");
+		isMouseOver = true;
+	}
 
-    void Update()
-    {
-        if (gazeAware.HasGazeFocus || isMouseOver)
-        {
-            statePoints += fadeSpeed * Time.deltaTime;
-            statePoints = Mathf.Clamp(statePoints, 0, 1);
-        }
-        else
-        {
-            statePoints = 0;
-        }
+	private void OnMouseExit ()
+	{
+		Debug.Log ("OnMouseExit");
+		isMouseOver = false;
+	}
 
-        sprite.color = Color.Lerp(color1, color2, statePoints);
-    }
+	void Update ()
+	{
+		bool gazeAware = false;
+		#if UNITY_STANDALONE_WIN
+		gazeAware = gazeAware.HasGazeFocus
+		#endif
+		if (gazeAware || isMouseOver) {
+			statePoints += fadeSpeed * Time.deltaTime;
+			statePoints = Mathf.Clamp (statePoints, 0, 1);
+		} else {
+			statePoints = 0;
+		}
+
+		sprite.color = Color.Lerp (color1, color2, statePoints);
+	}
 
     
 }
