@@ -1,4 +1,6 @@
-﻿namespace Wave.Levels
+﻿using System.Collections.Generic;
+
+namespace Wave.Levels
 {
 	using System.Linq;
 
@@ -46,6 +48,10 @@
 		private void LooseLevel ()
 		{
 			Main.Instance.SwitchState (GameStates.LEVEL_DEFEAT);
+
+			UnityEngine.Analytics.Analytics.CustomEvent ("looseLevel", new Dictionary<string, object> {
+				{ "levelID", this.LevelSystem.CurrentConfiguration.LevelId }
+			});
 		}
 
 		private void OnEnable ()
@@ -56,11 +62,18 @@
 
 		private void OnLevelFinished ()
 		{
+			UnityEngine.Analytics.Analytics.CustomEvent ("levelFinished", new Dictionary<string, object> {
+				{ "levelID", this.LevelSystem.CurrentConfiguration.LevelId }
+			});
 		}
 
 		private void OnLevelStarted ()
 		{
 			this.remainingLittleWaveDuration = this.LevelSystem.CurrentConfiguration.MaxLittleWaveDuration;
+
+			UnityEngine.Analytics.Analytics.CustomEvent ("levelStarted", new Dictionary<string, object> {
+				{ "levelID", this.LevelSystem.CurrentConfiguration.LevelId }
+			});
 		}
 
 		private void Reset ()
