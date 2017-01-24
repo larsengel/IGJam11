@@ -467,7 +467,9 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 1
+    UNet: 1
   cloudProjectId: 8f73cfcb-28f7-40c0-91bf-473b1e82e20c
   projectName: The Popular Wave
   organizationId: firegate666
