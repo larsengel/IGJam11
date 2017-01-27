@@ -11,7 +11,6 @@ namespace Wave
 	public enum GameStates
 	{
 		NONE,
-
 		START = 1,
 		LEVEL1,
 		LEVEL2,
@@ -24,11 +23,9 @@ namespace Wave
 		LEVEL9,
 		END,
 		CREDITS,
-
 		LEVEL_WON,
 		LEVEL_DEFEAT,
 		GAME_FINISHED,
-
 		TUTORIAL
 	}
 

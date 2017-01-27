@@ -2,15 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
-#if UNITY_STANDALONE_WIN
 using Tobii.EyeTracking;
-#endif
 
 using UnityEngine;
 
-#if UNITY_STANDALONE_WIN
 [RequireComponent (typeof(GazeAware))]
-#endif
 public class CharTracker : MonoBehaviour
 {
 	public float statePoints;
@@ -18,18 +14,14 @@ public class CharTracker : MonoBehaviour
 	Color color1 = Color.red;
 	Color color2 = Color.green;
 
-	#if UNITY_STANDALONE_WIN
 	GazeAware gazeAware;
-    #endif
 
 	SpriteRenderer sprite;
 	bool isMouseOver;
 
 	void Start ()
 	{
-		#if UNITY_STANDALONE_WIN
 		gazeAware = GetComponent<GazeAware>();
-		#endif
 
 		sprite = GetComponent<SpriteRenderer> ();
 		statePoints = 0f;
@@ -50,9 +42,7 @@ public class CharTracker : MonoBehaviour
 	void Update ()
 	{
 		var isGazeAware = false;
-		#if UNITY_STANDALONE_WIN
 		isGazeAware = gazeAware.HasGazeFocus;
-		#endif
 
 		if (isGazeAware || isMouseOver) {
 			statePoints += fadeSpeed * Time.deltaTime;

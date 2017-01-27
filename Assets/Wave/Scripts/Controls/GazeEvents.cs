@@ -1,7 +1,6 @@
 ﻿namespace Wave.Controls
 {
 
-	#if UNITY_STANDALONE_WIN
 	    using Tobii.EyeTracking;
 
 	    using UnityEngine;
@@ -59,5 +58,4 @@
 	        }
 	    }
 
-	#endif
 }
