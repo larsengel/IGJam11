@@ -11,7 +11,6 @@ public class HappyHalo : MonoBehaviour
     public float SpeedFactor;
 
     Light Light;
-    bool running;
     float time;
 
     // Use this for initialization
