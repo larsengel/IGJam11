@@ -71,6 +71,12 @@
                 newLevel = this.CurrentConfiguration.NextLevelId;
             }
 
+            var nextLevelId = main.LevelData[main.CurrentLevelId].NextLevelId;
+            if (nextLevelId != null)
+            {
+                main.CurrentLevelId = nextLevelId;
+            }
+
             this.main.SwitchState(newLevel != GameStates.NONE ? newLevel : GameStates.GAME_FINISHED);
         }
 
@@ -121,6 +127,20 @@
         {
             var newLevel = FindObjectOfType<LevelBehaviour>();
             var newLevelConfiguration = newLevel != null ? newLevel.Configuration : null;
+            var jsonConfig = main.LevelData[main.CurrentLevelId];
+
+            if (newLevelConfiguration != null)
+            {
+                newLevelConfiguration.Rows = jsonConfig.Rows;
+                newLevelConfiguration.SeatsPerRow = jsonConfig.SeatsPerRow;
+                newLevelConfiguration.EmptySeatsFactor = jsonConfig.EmptySeatsFactor;
+                newLevelConfiguration.ShowSignFactor = jsonConfig.ShowSignFactor;
+                newLevelConfiguration.Duration = jsonConfig.Duration;
+                newLevelConfiguration.MaxLittleWaveDuration = jsonConfig.MaxLittleWaveDuration;
+                newLevelConfiguration.PersuadeDuration = jsonConfig.PersuadeDuration;
+                newLevelConfiguration.UpsetSpectatorsInterval = jsonConfig.UpsetSpectatorsInterval;
+                newLevelConfiguration.NextLevelId = (jsonConfig.NextLevelId == null) ? GameStates.NONE : GameStates.LEVEL1;
+            }
 
             if (newLevelConfiguration != this.CurrentConfiguration)
             {
@@ -142,6 +162,11 @@
                 this.CurrentLevelState = LevelState.Finished;
                 this.OnLevelFinished();
             }
+        }
+
+        public JsonLevelConfiguration GetCurrentLevelConfig()
+        {
+            return main != null ? main.LevelData[main.CurrentLevelId] : new JsonLevelConfiguration();
         }
     }
 }

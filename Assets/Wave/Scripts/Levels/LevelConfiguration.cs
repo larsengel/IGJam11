@@ -8,6 +8,25 @@
     public class LevelConfiguration
     {
         /// <summary>
+        ///   Number of seated rows.
+        /// </summary>
+        [Tooltip("Number of seated rows")]
+        public int Rows = 2;
+
+        /// <summary>
+        ///   Number of seated seats per row.
+        /// </summary>
+        [Tooltip("Number of seated seats per row")]
+        public int SeatsPerRow = 5;
+
+        /// <summary>
+        ///   Percentage of empty seats in between.
+        /// </summary>
+        [Tooltip("Percentage of empty seats in between")]
+        [Range(0, 1)]
+        public float EmptySeatsFactor = 0;
+
+        /// <summary>
         ///   Chance that a spectator shows a sign.
         /// </summary>
         [Tooltip("Chance that a spectator shows a sign")]
@@ -58,12 +77,5 @@
         [Tooltip("Duration between two spectators becoming upset (per second)")]
         [Range(0.1f, 10.0f)]
         public float UpsetSpectatorsInterval = 1;
-
-        /// <summary>
-        ///   Threshold for waving ratio.
-        /// </summary>
-        [Tooltip("Threshold for waving ratio")]
-        [Range(0, 1)]
-        public float WaveThreshold = 0.25f;
     }
 }

@@ -10,7 +10,14 @@ namespace Wave.Levels
 
 	public class DefeatSystem : MonoBehaviour
 	{
-		public string LevelDefeatScene = "LevelDefeat";
+	    /// <summary>
+	    ///   Threshold for waving ratio.
+	    /// </summary>
+	    [Tooltip("Threshold for waving ratio")]
+	    [Range(0, 1)]
+	    public float WaveThreshold = 0.5f;
+
+	    public string LevelDefeatScene = "LevelDefeat";
 
 		public LevelSystem LevelSystem;
 
@@ -72,7 +79,8 @@ namespace Wave.Levels
 			this.remainingLittleWaveDuration = this.LevelSystem.CurrentConfiguration.MaxLittleWaveDuration;
 
 			UnityEngine.Analytics.Analytics.CustomEvent ("levelStarted", new Dictionary<string, object> {
-				{ "levelID", this.LevelSystem.CurrentConfiguration.LevelId }
+				{ "levelID", this.LevelSystem.CurrentConfiguration.LevelId },
+			    { "levelConfig", this.LevelSystem.GetCurrentLevelConfig() },
 			});
 		}
 
@@ -95,7 +103,7 @@ namespace Wave.Levels
 			// Update wave ratio.
 			this.WaveRatio = this.ComputeWaveRatio ();
 
-			if (this.WaveRatio < this.LevelSystem.CurrentConfiguration.WaveThreshold) {
+			if (this.WaveRatio < WaveThreshold) {
 				this.remainingLittleWaveDuration -= Time.deltaTime;
 			}
 

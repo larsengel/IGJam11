@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
+using Wave.Levels;
 
 namespace Wave
 {
@@ -13,14 +15,6 @@ namespace Wave
 		NONE,
 		START = 1,
 		LEVEL1,
-		LEVEL2,
-		LEVEL3,
-		LEVEL4,
-		LEVEL5,
-		LEVEL6,
-		LEVEL7,
-		LEVEL8,
-		LEVEL9,
 		END,
 		CREDITS,
 		LEVEL_WON,
@@ -49,10 +43,12 @@ namespace Wave
 	{
 		public static Main Instance { get; private set; }
 
-		public int LevelCount = 9;
+		public int LevelCount = 1;
 		public Camera mainCamera;
 
 		GameState current_state;
+	    public string CurrentLevelId = "level1";
+	    public Dictionary<string, JsonLevelConfiguration> LevelData;
 
 		AssetProvider AssetProvider;
        
@@ -66,12 +62,12 @@ namespace Wave
 
 		void Awake ()
 		{
-			AssetProvider = GetComponent<AssetProvider> ();
+		    LoadLevelData();
+
+		    AssetProvider = GetComponent<AssetProvider> ();
 
 			states.Add (GameStates.START, new GameState (GameStates.START, "Start", start_assets));
-			for (var levelIndex = 0; levelIndex < LevelCount; levelIndex++) {
-				AddLevelState (levelIndex);
-			}
+		    states.Add (GameStates.LEVEL1, new GameState (GameStates.LEVEL1, "Level1", new List<string> () { "Game", "InGameUI", "Level1" }));
 			states.Add (GameStates.END, new GameState (GameStates.END, "End", end_assets));
 			states.Add (GameStates.CREDITS, new GameState (GameStates.CREDITS, "Credits", credits_assets));
 			this.states.Add (
@@ -94,16 +90,11 @@ namespace Wave
 			Instance = this;
 		}
 
-		private void AddLevelState (int levelIndex)
-		{
-			var levelGameState = GameStates.LEVEL1 + levelIndex;
-			var levelName = "Level" + (levelIndex + 1);
-			states.Add (levelGameState, new GameState (levelGameState, levelName, new List<string> () {
-				"Game",
-				"InGameUI",
-				levelName
-			}));
-		}
+	    private void LoadLevelData()
+	    {
+	        var levelsTxt = Resources.Load<TextAsset>("levels").text;
+	        LevelData = JsonConvert.DeserializeObject<Dictionary<string, JsonLevelConfiguration>>(levelsTxt);
+	    }
 
 		/**
          * unloads the current state assets, loads the new state assets
@@ -135,18 +126,18 @@ namespace Wave
 		}
 
 
-		bool change;
+		// bool change;
 		// Level switch for Debugging
 		void Update ()
 		{
-			if (Input.GetKey (KeyCode.P) && !change) {
+			/*if (Input.GetKey (KeyCode.P) && !change) {
 				change = true;
 				if (current_state.Name == "Level1") {
 					SwitchState (GameStates.LEVEL2);
 				} else {
 					SwitchState (GameStates.LEVEL1);
 				}
-			}
+			}*/
 
 		}
 

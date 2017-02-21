@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da9ce978e872ea48b7a6e6f86d6fb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaveThreshold: 0.5
   LevelDefeatScene: LevelDefeat
   LevelSystem: {fileID: 1902887266}
   SpectatorSystem: {fileID: 776921100}
@@ -421,7 +422,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudiencePrefab: {fileID: 1680480023894746, guid: 96e35c818b66b9a4ebcb4046e661f06a,
     type: 2}
+  EmptyChairPrefab: {fileID: 1431840164947924, guid: 7631d0fc745d3c94cb31f9d5266705f6,
+    type: 2}
   LevelSystem: {fileID: 1902887266}
+  RowStartId: 0
+  MaxRowId: 3
+  SeatStartId: -3
+  SeatMaxId: 3
+  CharacterWidth: 8
+  CharacterHeight: 5
+  SecondRowSpacing: 2
+  MinimumScale: 0.9
+  MaximumScale: 1.1
+  MaxDepthScale: 0.4
+  InitialScale: 1.22
 --- !u!1 &1902887265
 GameObject:
   m_ObjectHideFlags: 0

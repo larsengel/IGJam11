@@ -1,0 +1,38 @@
+{
+    "level1": {
+        "LevelId": "level1",
+        "NextLevelId": "level2",
+        "Rows": 2,
+        "SeatsPerRow": 5,
+        "EmptySeatsFactor": 0,
+        "ShowSignFactor": 0,
+        "Duration": 45,
+        "MaxLittleWaveDuration": 10,
+        "PersuadeDuration": 0.5,
+        "UpsetSpectatorsInterval": 3
+    },
+    "level2": {
+        "LevelId": "level2",
+        "NextLevelId": "level3",
+        "Rows": 3,
+        "SeatsPerRow": 4,
+        "EmptySeatsFactor": 0.05,
+        "ShowSignFactor": 0.3,
+        "Duration": 60,
+        "MaxLittleWaveDuration": 20,
+        "PersuadeDuration": 1,
+        "UpsetSpectatorsInterval": 2
+    },
+    "level3": {
+        "LevelId": "level3",
+        "NextLevelId": null,
+        "Rows": 4,
+        "SeatsPerRow": 6,
+        "EmptySeatsFactor": 0.05,
+        "ShowSignFactor": 0.3,
+        "Duration": 90,
+        "MaxLittleWaveDuration": 20,
+        "PersuadeDuration": 1,
+        "UpsetSpectatorsInterval": 1.5
+    }
+}
