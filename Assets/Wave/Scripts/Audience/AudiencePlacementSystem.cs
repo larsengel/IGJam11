@@ -15,6 +15,7 @@
 	    // Row definition from start to end index: 4 rows
 	    public int RowStartId = 0;
 	    public int MaxRowId = 3;
+	    public int NumberOfRows { get { return MaxRowId - RowStartId + 1; } }
 
 	    // Seats per row definiton from start to end index: 7 seats
 	    public int SeatStartId = -3;
@@ -87,7 +88,7 @@
 				                          audienceConfiguration.Audience);
 
 			// guys in back are smaller than front ...
-			float row_scale_factor = InitialScale - (row_id * MaxDepthScale / LevelSystem.CurrentConfiguration.Rows);
+			float row_scale_factor = InitialScale - (row_id * MaxDepthScale / NumberOfRows);
 			// ... and have a indiviaual scale factor
 			float scale = row_scale_factor * Random.Range (MinimumScale, MaximumScale);
 
