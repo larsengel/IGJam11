@@ -80,7 +80,7 @@ namespace Wave.Levels
 
 			UnityEngine.Analytics.Analytics.CustomEvent ("levelStarted", new Dictionary<string, object> {
 				{ "levelID", this.LevelSystem.CurrentConfiguration.LevelId },
-			    { "levelConfig", this.LevelSystem.GetCurrentLevelConfig() },
+			    { "levelConfig", this.LevelSystem.GetCurrentLevelConfig() }
 			});
 		}
 
